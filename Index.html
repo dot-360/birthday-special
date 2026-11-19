@@ -1,0 +1,647 @@
+```html
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Vanshika | ✨ Sacred Recipe & Celebration</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Fira+Code:wght@400;500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        lavender: {
+                            50: '#faf7fc',
+                            100: '#f4eef9',
+                            200: '#e8dbf2',
+                            300: '#d5bfe6',
+                            400: '#bd9cd6',
+                            500: '#a379c3',
+                            600: '#885ca8',
+                            700: '#70488d',
+                            800: '#5c3c74',
+                            900: '#4d335f',
+                        },
+                        cream: '#FDFBF7',
+                        gold: {
+                            DEFAULT: '#D4AF37',
+                            light: '#F3E5AB',
+                            dark: '#AA820A',
+                        },
+                        charcoal: '#2D2A32'
+                    },
+                    fontFamily: {
+                        serif: ['"Cormorant Garamond"', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        mono: ['"Fira Code"', 'monospace'],
+                    },
+                    animation: {
+                        'spin-slow': 'spin 20s linear infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-glow': 'pulseGlow 3s ease-in-out infinite',
+                        'shimmer': 'shimmer 2.5s infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px) rotate(0deg)' },
+                            '50%': { transform: 'translateY(-10px) rotate(2deg)' },
+                        },
+                        pulseGlow: {
+                            '0%, 100%': { opacity: '0.6', filter: 'drop-shadow(0 0 15px rgba(212, 175, 55, 0.4))' },
+                            '50%': { opacity: '1', filter: 'drop-shadow(0 0 25px rgba(212, 175, 55, 0.8))' },
+                        },
+                        shimmer: {
+                            '100%': { transform: 'translateX(100%)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Styles & Card Flip Effects */
+        body {
+            background-color: #FDFBF7;
+            color: #2D2A32;
+            overflow-x: hidden;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        /* Glassmorphism utility */
+        .glass-card {
+            background: rgba(244, 238, 249, 0.65);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(212, 175, 55, 0.25);
+            box-shadow: 0 10px 30px -10px rgba(112, 72, 141, 0.08);
+        }
+
+        .glass-terminal {
+            background: rgba(30, 25, 38, 0.92);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Perspective for 3D flip cards */
+        .perspective-1000 {
+            perspective: 1000px;
+        }
+
+        .flip-card-inner {
+            transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+            transform-style: preserve-3d;
+        }
+
+        .flip-card.flipped .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .flip-card-front, .flip-card-back {
+            backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
+        }
+
+        .flip-card-back {
+            transform: rotateY(180deg);
+        }
+
+        /* Canvas overlay */
+        #particleCanvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            z-index: 20;
+        }
+
+        /* Lotus SVG watermark background */
+        .bg-lotus-pattern {
+            background-image: radial-gradient(circle at 50% 50%, rgba(232, 219, 242, 0.4) 0%, transparent 70%);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #FDFBF7;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #d5bfe6;
+            border-radius: 999px;
+        }
+    </style>
+</head>
+<body class="relative min-h-screen selection:bg-lavender-200 selection:text-lavender-900">
+
+    <!-- Interactive Canvas Particle Background -->
+    <canvas id="particleCanvas"></canvas>
+
+    <!-- Background Mandala / Lotus Watermark SVG -->
+    <div class="fixed inset-0 pointer-events-none flex items-center justify-center opacity-10 z-0 overflow-hidden">
+        <svg class="w-[800px] h-[800px] text-lavender-700 animate-spin-slow" viewBox="0 0 100 100" fill="currentColor">
+            <path d="M50 0 C55 25, 75 45, 100 50 C75 55, 55 75, 50 100 C45 75, 25 55, 0 50 C25 45, 45 25, 50 0 Z"/>
+            <circle cx="50" cy="50" r="30" fill="none" stroke="currentColor" stroke-width="0.5" stroke-dasharray="2 2"/>
+            <circle cx="50" cy="50" r="15" fill="none" stroke="currentColor" stroke-width="0.5"/>
+        </svg>
+    </div>
+
+    <!-- Main Container -->
+    <main class="relative z-10 max-w-4xl mx-auto px-4 py-8 sm:py-12 flex flex-col items-center gap-12 sm:gap-16">
+
+        <!-- Top Header & Language Tag -->
+        <header class="w-full text-center flex flex-col items-center pt-2">
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass-card border border-gold/40 text-xs font-medium text-lavender-800 tracking-wider uppercase mb-6 shadow-sm">
+                <span class="w-2 h-2 rounded-full bg-gold animate-ping"></span>
+                <span>August 24 • Indian Standard Time (IST)</span>
+            </div>
+
+            <!-- Sacred Combined Emblem: Lotus + Whisk + Code Sparks -->
+            <div class="relative group my-4 cursor-pointer" onclick="triggerEmblemMagic()" title="Tap for spiritual resonance">
+                <div class="w-28 h-28 sm:w-32 sm:h-32 rounded-full glass-card flex items-center justify-center p-4 border-2 border-gold/40 animate-pulse-glow shadow-xl relative overflow-hidden">
+                    <div class="absolute inset-0 bg-gradient-to-tr from-lavender-200/40 via-transparent to-gold/20 opacity-50"></div>
+                    
+                    <!-- Emblem SVG -->
+                    <svg class="w-16 h-16 sm:w-20 sm:h-20 text-lavender-800 transition-transform duration-500 group-hover:scale-110" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <!-- Lotus Base -->
+                        <path d="M32 46 C24 46 16 38 14 30 C20 30 28 34 32 40 C36 34 44 30 50 30 C48 38 40 46 32 46 Z" fill="rgba(163, 121, 195, 0.2)" stroke="#885ca8"/>
+                        <path d="M32 44 C20 44 10 32 18 20 C24 26 28 34 32 44 Z" stroke="#D4AF37"/>
+                        <path d="M32 44 C44 44 54 32 46 20 C40 26 36 34 32 44 Z" stroke="#D4AF37"/>
+                        <!-- Central Crown / Whisk hybrid -->
+                        <path d="M32 12 L32 38" stroke="#885ca8" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M26 18 C26 28 32 36 32 36 C32 36 38 28 38 18 C38 12 32 10 32 10 C32 10 26 12 26 18 Z" stroke="#D4AF37" fill="rgba(212, 175, 55, 0.15)"/>
+                        <!-- Sparkles -->
+                        <circle cx="32" cy="8" r="1.5" fill="#D4AF37"/>
+                        <circle cx="18" cy="14" r="1" fill="#885ca8"/>
+                        <circle cx="46" cy="14" r="1" fill="#885ca8"/>
+                    </svg>
+                </div>
+                <!-- Soft Subtitle Prompt -->
+                <p class="text-[11px] text-lavender-700/80 tracking-widest uppercase mt-2 font-mono">✦ Tap Emblem to Ring Bell ✦</p>
+            </div>
+
+            <!-- Main Heading -->
+            <h1 class="font-serif text-4xl sm:text-6xl md:text-7xl font-bold text-charcoal tracking-tight leading-tight mt-2">
+                Happy Birthday,<br>
+                <span class="bg-gradient-to-r from-lavender-800 via-purple-700 to-gold-dark bg-clip-text text-transparent italic font-normal">
+                    Vanshika Thukral
+                </span>
+            </h1>
+            
+            <p class="mt-4 text-base sm:text-lg text-charcoal/80 max-w-lg font-light leading-relaxed">
+                Chef, Baker & Spiritual Soul ✨ Crafting sweetness, blooming in mindfulness, and bringing harmony to every recipe of life.
+            </p>
+        </header>
+
+        <!-- Live IST Countdown / Celebration Status Banner -->
+        <section class="w-full glass-card rounded-2xl p-6 sm:p-8 border border-gold/30 shadow-lg text-center relative overflow-hidden">
+            <div class="absolute -right-10 -bottom-10 w-32 h-32 bg-lavender-300/30 rounded-full blur-2xl pointer-events-none"></div>
+            
+            <h2 id="timerHeadline" class="font-serif text-xl sm:text-2xl font-semibold text-lavender-900 mb-4 flex items-center justify-center gap-2">
+                <span>✨</span> <span id="timerTitleText">Counting Down to August 24 (IST)</span> <span>✨</span>
+            </h2>
+
+            <!-- Timer Grid -->
+            <div id="countdownGrid" class="grid grid-cols-4 gap-2 sm:gap-4 max-w-md mx-auto my-2">
+                <div class="bg-white/80 rounded-xl p-3 sm:p-4 border border-lavender-200 shadow-sm flex flex-col items-center">
+                    <span id="days" class="font-serif text-2xl sm:text-4xl font-bold text-lavender-800">00</span>
+                    <span class="text-[10px] sm:text-xs font-mono uppercase text-charcoal/60 mt-1">Days</span>
+                </div>
+                <div class="bg-white/80 rounded-xl p-3 sm:p-4 border border-lavender-200 shadow-sm flex flex-col items-center">
+                    <span id="hours" class="font-serif text-2xl sm:text-4xl font-bold text-lavender-800">00</span>
+                    <span class="text-[10px] sm:text-xs font-mono uppercase text-charcoal/60 mt-1">Hours</span>
+                </div>
+                <div class="bg-white/80 rounded-xl p-3 sm:p-4 border border-lavender-200 shadow-sm flex flex-col items-center">
+                    <span id="minutes" class="font-serif text-2xl sm:text-4xl font-bold text-lavender-800">00</span>
+                    <span class="text-[10px] sm:text-xs font-mono uppercase text-charcoal/60 mt-1">Mins</span>
+                </div>
+                <div class="bg-white/80 rounded-xl p-3 sm:p-4 border border-lavender-200 shadow-sm flex flex-col items-center">
+                    <span id="seconds" class="font-serif text-2xl sm:text-4xl font-bold text-gold-dark">00</span>
+                    <span class="text-[10px] sm:text-xs font-mono uppercase text-charcoal/60 mt-1">Secs</span>
+                </div>
+            </div>
+
+            <p id="timerSubtext" class="text-xs text-charcoal/60 mt-4 font-mono">
+                Synced precisely to Asia/Kolkata (UTC+05:30)
+            </p>
+        </section>
+
+        <!-- SECTION 2: Software Engineer Terminal & Sacred Recipe Compiler Card -->
+        <section class="w-full glass-terminal rounded-2xl p-5 sm:p-8 text-left shadow-2xl relative border border-gold/30">
+            <!-- Terminal Header -->
+            <div class="flex items-center justify-between pb-4 border-b border-white/10 mb-6">
+                <div class="flex items-center gap-2">
+                    <div class="w-3 h-3 rounded-full bg-red-400"></div>
+                    <div class="w-3 h-3 rounded-full bg-yellow-400"></div>
+                    <div class="w-3 h-3 rounded-full bg-green-400"></div>
+                    <span class="ml-2 font-mono text-xs text-lavender-300/70">vanshika_soul_recipe.v24.0.ts</span>
+                </div>
+                <span class="font-mono text-[10px] text-gold/80 bg-gold/10 px-2 py-0.5 rounded border border-gold/20">STATUS: READY_TO_DEPLOY</span>
+            </div>
+
+            <!-- Monospace Code Recipe Block -->
+            <div class="font-mono text-xs sm:text-sm text-lavender-100 space-y-2 leading-relaxed bg-black/30 p-4 rounded-xl border border-white/5 overflow-x-auto">
+                <p><span class="text-purple-400">const</span> <span class="text-gold-light">vanshikaThukral</span> = <span class="text-purple-400">new</span> <span class="text-yellow-200">ArtisanSoul</span>({</p>
+                <p class="pl-4"><span class="text-lavender-300">name</span>: <span class="text-green-300">"Vanshika Thukral"</span>,</p>
+                <p class="pl-4"><span class="text-lavender-300">professions</span>: [<span class="text-green-300">"Chef"</span>, <span class="text-green-300">"Master Baker"</span>],</p>
+                <p class="pl-4"><span class="text-lavender-300">vibration</span>: <span class="text-green-300">"Spiritual Clarity & Mindful Peace 🧘‍♀️✨"</span>,</p>
+                <p class="pl-4"><span class="text-lavender-300">ingredients</span>: [<span class="text-green-300">"Warmth"</span>, <span class="text-green-300">"Precision"</span>, <span class="text-green-300">"Patience"</span>, <span class="text-green-300">"Pure Heart"</span>],</p>
+                <p class="pl-4"><span class="text-lavender-300">bugCount</span>: <span class="text-blue-300">0</span>,</p>
+                <p class="pl-4"><span class="text-lavender-300">happinessUptime</span>: <span class="text-blue-300">Infinity</span></p>
+                <p>});</p>
+            </div>
+
+            <!-- CTA Button -->
+            <div class="mt-8 flex flex-col items-center">
+                <button id="deployBtn" onclick="deployBlessing()" class="group relative inline-flex items-center gap-3 px-8 py-4 rounded-xl bg-gradient-to-r from-gold via-yellow-500 to-gold-dark text-charcoal font-semibold text-sm sm:text-base shadow-lg hover:shadow-gold/30 transition-all duration-300 active:scale-95 overflow-hidden">
+                    <span class="relative z-10 flex items-center gap-2 font-medium">
+                        <svg class="w-5 h-5 text-charcoal" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                        Deploy Birthday Blessing & Wish
+                    </span>
+                    <div class="absolute inset-0 bg-white/30 transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+                </button>
+                <p class="text-[11px] font-mono text-lavender-300/60 mt-3 text-center">Triggers Web Audio singing bowl frequency + celebratory burst</p>
+            </div>
+
+            <!-- Revealing Heartfelt Poetic Wish Letter -->
+            <div id="blessingLetter" class="hidden mt-8 pt-8 border-t border-white/10 text-lavender-100 font-sans leading-relaxed space-y-4 animate-fade-in">
+                <div class="p-6 rounded-xl bg-lavender-900/50 border border-gold/20 text-cream">
+                    <h3 class="font-serif text-2xl text-gold mb-3 italic">Dearest Vanshika,</h3>
+                    
+                    <p class="text-sm sm:text-base text-lavender-100/90 leading-relaxed">
+                        Just as the finest sourdough requires patience, exact temperature, and loving care, or the delicate layers of a pastry require passion and artistic balance—may your year ahead rise to absolute perfection.
+                    </p>
+                    
+                    <p class="text-sm sm:text-base text-lavender-100/90 leading-relaxed mt-3">
+                        In the kitchen of life, you blend culinary artistry with a serene spiritual aura. May every dish you craft bring joy to others, every moment of mindfulness bring deep peace to your soul, and may your code of life run without a single glitch or warning.
+                    </p>
+
+                    <div class="mt-6 pt-4 border-t border-gold/20 flex items-center justify-between font-serif italic text-gold text-sm sm:text-base">
+                        <span>With boundless warmth & clean code ✨</span>
+                        <span>August 24 IST</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: 'Ingredients of a Wonderful Year' Interactive Flip Cards -->
+        <section class="w-full">
+            <div class="text-center mb-8">
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-charcoal">Ingredients of Your New Year</h2>
+                <p class="text-sm text-charcoal/70 mt-1">Tap each card to reveal the sacred blessing inside</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+                <!-- Card 1: Artisan Craft (Culinary) -->
+                <div class="flip-card perspective-1000 h-64 cursor-pointer" onclick="this.classList.toggle('flipped')">
+                    <div class="flip-card-inner relative w-full h-full rounded-2xl glass-card border border-gold/30 shadow-md">
+                        <!-- Front -->
+                        <div class="flip-card-front absolute inset-0 p-6 flex flex-col items-center justify-center text-center">
+                            <div class="w-14 h-14 rounded-full bg-lavender-200/80 flex items-center justify-center text-lavender-800 mb-4 shadow-inner">
+                                <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v18m0-18C8 3 4 7 4 12c0 3 2 6 5 7.5M12 3c4 0 8 4 8 9 0 3-2 6-5 7.5" />
+                                    <circle cx="12" cy="12" r="3" fill="#D4AF37"/>
+                                </svg>
+                            </div>
+                            <h3 class="font-serif text-2xl font-bold text-lavender-900">Artisan Craft</h3>
+                            <p class="text-xs text-charcoal/60 mt-1 font-mono">Chef & Baker Passion</p>
+                            <span class="mt-4 text-[11px] text-gold-dark font-medium uppercase tracking-wider">✦ Tap to flip ✦</span>
+                        </div>
+                        <!-- Back -->
+                        <div class="flip-card-back absolute inset-0 p-6 rounded-2xl bg-gradient-to-br from-lavender-800 to-purple-900 text-white flex flex-col justify-center text-center">
+                            <h4 class="font-serif text-xl text-gold mb-2 font-semibold">The Culinary Touch</h4>
+                            <p class="text-xs sm:text-sm text-lavender-100 leading-relaxed">
+                                May every loaf proof perfectly, every dessert inspire wonder, and every flavor profile reflect your unique artistic soul.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2: Inner Radiance (Spiritual) -->
+                <div class="flip-card perspective-1000 h-64 cursor-pointer" onclick="this.classList.toggle('flipped')">
+                    <div class="flip-card-inner relative w-full h-full rounded-2xl glass-card border border-gold/30 shadow-md">
+                        <!-- Front -->
+                        <div class="flip-card-front absolute inset-0 p-6 flex flex-col items-center justify-center text-center">
+                            <div class="w-14 h-14 rounded-full bg-lavender-200/80 flex items-center justify-center text-lavender-800 mb-4 shadow-inner">
+                                <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9 9 0 100-18 9 9 0 000 18z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v8m-4-4h8" />
+                                </svg>
+                            </div>
+                            <h3 class="font-serif text-2xl font-bold text-lavender-900">Inner Radiance</h3>
+                            <p class="text-xs text-charcoal/60 mt-1 font-mono">Spiritual Journey</p>
+                            <span class="mt-4 text-[11px] text-gold-dark font-medium uppercase tracking-wider">✦ Tap to flip ✦</span>
+                        </div>
+                        <!-- Back -->
+                        <div class="flip-card-back absolute inset-0 p-6 rounded-2xl bg-gradient-to-br from-purple-900 to-lavender-900 text-white flex flex-col justify-center text-center">
+                            <h4 class="font-serif text-xl text-gold mb-2 font-semibold">Lotus Serenity</h4>
+                            <p class="text-xs sm:text-sm text-lavender-100 leading-relaxed">
+                                Like a blooming lotus, may your presence stay centered, peaceful, and grounded in luminous clarity throughout 2024 and beyond.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3: Infinite Uptime (Tech/Soul Harmony) -->
+                <div class="flip-card perspective-1000 h-64 cursor-pointer" onclick="this.classList.toggle('flipped')">
+                    <div class="flip-card-inner relative w-full h-full rounded-2xl glass-card border border-gold/30 shadow-md">
+                        <!-- Front -->
+                        <div class="flip-card-front absolute inset-0 p-6 flex flex-col items-center justify-center text-center">
+                            <div class="w-14 h-14 rounded-full bg-lavender-200/80 flex items-center justify-center text-lavender-800 mb-4 shadow-inner">
+                                <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                                </svg>
+                            </div>
+                            <h3 class="font-serif text-2xl font-bold text-lavender-900">Infinite Joy</h3>
+                            <p class="text-xs text-charcoal/60 mt-1 font-mono">Soul & Code Harmony</p>
+                            <span class="mt-4 text-[11px] text-gold-dark font-medium uppercase tracking-wider">✦ Tap to flip ✦</span>
+                        </div>
+                        <!-- Back -->
+                        <div class="flip-card-back absolute inset-0 p-6 rounded-2xl bg-gradient-to-br from-lavender-800 to-charcoal text-white flex flex-col justify-center text-center">
+                            <h4 class="font-serif text-xl text-gold mb-2 font-semibold">Zero Bugs, Full Joy</h4>
+                            <p class="text-xs sm:text-sm text-lavender-100 leading-relaxed">
+                                May your year execute with maximum happiness, optimized high frequency, sweet memories, and endless laughter.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Interactive Audio Control / Chime Button -->
+        <div class="flex flex-wrap items-center justify-center gap-4 py-4">
+            <button onclick="playSingingBowl()" class="glass-card px-5 py-2.5 rounded-full border border-gold/30 text-xs font-medium text-lavender-900 hover:bg-lavender-200/50 flex items-center gap-2 transition-all shadow-sm">
+                <span>🔔</span> Play Sacred Singing Bowl Tone
+            </button>
+            <button onclick="triggerPetalBurst()" class="glass-card px-5 py-2.5 rounded-full border border-gold/30 text-xs font-medium text-lavender-900 hover:bg-lavender-200/50 flex items-center gap-2 transition-all shadow-sm">
+                <span>🌸</span> Release Gold & Lavender Petals
+            </button>
+        </div>
+
+        <!-- Footer -->
+        <footer class="w-full text-center py-8 border-t border-lavender-200/60 text-xs text-charcoal/60 font-mono flex flex-col items-center gap-2">
+            <p>Crafted with care & clean code for <span class="text-lavender-800 font-semibold font-sans">Vanshika Thukral</span> ✨</p>
+            <p class="text-[10px] text-charcoal/40">August 24 Celebration • IST Timezone</p>
+        </footer>
+
+    </main>
+
+    <!-- JavaScript Logic -->
+    <script>
+        /* ===================================================
+           1. IST COUNTDOWN TIMER LOGIC
+           Target: August 24, 00:00:00 IST
+           =================================================== */
+        function updateISTCountdown() {
+            const now = new Date();
+            
+            // Calculate current date in IST (UTC + 5.5 hours)
+            const utcTime = now.getTime() + (now.getTimezoneOffset() * 60000);
+            const istOffsetMs = 5.5 * 3600 * 1000;
+            const currentISTDate = new Date(utcTime + istOffsetMs);
+            
+            const currentYearIST = currentISTDate.getFullYear();
+            
+            // Target: August 24 00:00:00 IST of current year
+            let targetIST = new Date(Date.UTC(currentYearIST, 7, 23, 18, 30, 0)); // Aug 23 18:30 UTC = Aug 24 00:00 IST
+            
+            // If Aug 24 IST has passed for this year, target next year
+            if (currentISTDate > new Date(Date.UTC(currentYearIST, 7, 24, 18, 29, 59))) {
+                targetIST = new Date(Date.UTC(currentYearIST + 1, 7, 23, 18, 30, 0));
+            }
+
+            const diff = targetIST.getTime() - now.getTime();
+
+            // Check if TODAY is Aug 24 in IST
+            const isAug24 = (currentISTDate.getMonth() === 7 && currentISTDate.getDate() === 24);
+
+            if (isAug24) {
+                document.getElementById('timerTitleText').innerText = "🎉 TODAY IS VANSHIKA'S CELEBRATION! 🎉";
+                document.getElementById('countdownGrid').innerHTML = `
+                    <div class="col-span-4 bg-gradient-to-r from-gold/20 via-lavender-200 to-gold/20 p-4 rounded-xl border border-gold/40 text-lavender-900 font-serif text-xl sm:text-2xl font-bold animate-pulse">
+                        ✨ Happy Birthday Vanshika! Wishing you pure joy today! ✨
+                    </div>
+                `;
+                document.getElementById('timerSubtext').innerText = "Celebration Mode Active in IST";
+                return;
+            }
+
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+            document.getElementById('days').innerText = String(days).padStart(2, '0');
+            document.getElementById('hours').innerText = String(hours).padStart(2, '0');
+            document.getElementById('minutes').innerText = String(minutes).padStart(2, '0');
+            document.getElementById('seconds').innerText = String(seconds).padStart(2, '0');
+        }
+
+        setInterval(updateISTCountdown, 1000);
+        updateISTCountdown();
+
+        /* ===================================================
+           2. WEB AUDIO API - TIBETAN SINGING BOWL SYNTHESIZER
+           =================================================== */
+        let audioCtx = null;
+
+        function playSingingBowl() {
+            try {
+                const AudioContext = window.AudioContext || window.webkitAudioContext;
+                if (!audioCtx) {
+                    audioCtx = new AudioContext();
+                }
+                if (audioCtx.state === 'suspended') {
+                    audioCtx.resume();
+                }
+
+                // Harmonics simulating a peaceful singing bowl (~432Hz base frequency)
+                const baseFreq = 432;
+                const harmonics = [1, 2.01, 3.02, 4.05];
+                const gains = [0.4, 0.2, 0.1, 0.05];
+
+                harmonics.forEach((multiplier, i) => {
+                    const osc = audioCtx.createOscillator();
+                    const gainNode = audioCtx.createGain();
+
+                    osc.type = 'sine';
+                    osc.frequency.setValueAtTime(baseFreq * multiplier, audioCtx.currentTime);
+
+                    // Add subtle low-frequency pitch wobble for resonant warmth
+                    const lfo = audioCtx.createOscillator();
+                    const lfoGain = audioCtx.createGain();
+                    lfo.frequency.setValueAtTime(2 + i, audioCtx.currentTime);
+                    lfoGain.gain.setValueAtTime(1.2, audioCtx.currentTime);
+                    lfo.connect(osc.frequency);
+                    lfo.start();
+
+                    // Envelope: fast gentle attack, long smooth exponential decay
+                    gainNode.gain.setValueAtTime(0.0001, audioCtx.currentTime);
+                    gainNode.gain.exponentialRampToValueAtTime(gains[i], audioCtx.currentTime + 0.15);
+                    gainNode.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + 4.5);
+
+                    osc.connect(gainNode);
+                    gainNode.connect(audioCtx.destination);
+
+                    osc.start();
+                    osc.stop(audioCtx.currentTime + 4.6);
+                });
+            } catch (e) {
+                console.log("Audio Context not allowed without direct interaction", e);
+            }
+        }
+
+        function triggerEmblemMagic() {
+            playSingingBowl();
+            triggerPetalBurst();
+        }
+
+        /* ===================================================
+           3. CANVAS PARTICLES & CONFETTI PETAL SYSTEM
+           =================================================== */
+        const canvas = document.getElementById('particleCanvas');
+        const ctx = canvas.getContext('2d');
+
+        let width = canvas.width = window.innerWidth;
+        let height = canvas.height = window.innerHeight;
+
+        window.addEventListener('resize', () => {
+            width = canvas.width = window.innerWidth;
+            height = canvas.height = window.innerHeight;
+        });
+
+        class Particle {
+            constructor(x, y, isBurst = false) {
+                this.x = x || Math.random() * width;
+                this.y = y || (isBurst ? height / 2 : Math.random() * height);
+                this.isBurst = isBurst;
+                
+                this.size = Math.random() * (isBurst ? 8 : 4) + 2;
+                this.speedX = isBurst ? (Math.random() - 0.5) * 12 : (Math.random() - 0.5) * 0.8;
+                this.speedY = isBurst ? (Math.random() - 0.7) * 12 : Math.random() * 0.8 + 0.3;
+                this.gravity = isBurst ? 0.15 : 0;
+                
+                // Color palette: Gold, Lavender, Rose
+                const colors = ['#D4AF37', '#F3E5AB', '#bd9cd6', '#e8dbf2', '#C58B88'];
+                this.color = colors[Math.floor(Math.random() * colors.length)];
+                
+                this.opacity = Math.random() * 0.8 + 0.2;
+                this.rotation = Math.random() * Math.PI * 2;
+                this.rotationSpeed = (Math.random() - 0.5) * 0.08;
+                this.life = isBurst ? 100 : Infinity;
+                this.maxLife = 100;
+            }
+
+            update() {
+                this.x += this.speedX;
+                this.y += this.speedY;
+                this.speedY += this.gravity;
+                this.rotation += this.rotationSpeed;
+
+                if (this.isBurst) {
+                    this.life--;
+                    this.opacity = Math.max(0, this.life / this.maxLife);
+                } else {
+                    // Loop floating particles
+                    if (this.y > height) {
+                        this.y = -10;
+                        this.x = Math.random() * width;
+                    }
+                }
+            }
+
+            draw() {
+                ctx.save();
+                ctx.translate(this.x, this.y);
+                ctx.rotate(this.rotation);
+                ctx.globalAlpha = this.opacity;
+                ctx.fillStyle = this.color;
+
+                // Draw petal / diamond particle
+                ctx.beginPath();
+                ctx.moveTo(0, -this.size);
+                ctx.quadraticCurveTo(this.size, 0, 0, this.size);
+                ctx.quadraticCurveTo(-this.size, 0, 0, -this.size);
+                ctx.fill();
+
+                ctx.restore();
+            }
+        }
+
+        const particles = [];
+
+        // Ambient ambient floating particles
+        for (let i = 0; i < 40; i++) {
+            particles.push(new Particle());
+        }
+
+        function triggerPetalBurst() {
+            const centerX = width / 2;
+            const centerY = height / 3;
+            for (let i = 0; i < 70; i++) {
+                particles.push(new Particle(centerX, centerY, true));
+            }
+        }
+
+        function animateCanvas() {
+            ctx.clearRect(0, 0, width, height);
+            
+            for (let i = particles.length - 1; i >= 0; i--) {
+                const p = particles[i];
+                p.update();
+                p.draw();
+
+                if (p.isBurst && p.life <= 0) {
+                    particles.splice(i, 1);
+                }
+            }
+            requestAnimationFrame(animateCanvas);
+        }
+
+        window.onload = function() {
+            animateCanvas();
+        };
+
+        /* ===================================================
+           4. DEPLOY BLESSING BUTTON LOGIC
+           =================================================== */
+        function deployBlessing() {
+            playSingingBowl();
+            triggerPetalBurst();
+
+            const letter = document.getElementById('blessingLetter');
+            letter.classList.remove('hidden');
+            
+            // Scroll smoothly to letter
+            setTimeout(() => {
+                letter.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }, 200);
+
+            const btn = document.getElementById('deployBtn');
+            btn.innerHTML = `
+                <span class="relative z-10 flex items-center gap-2">
+                    ✨ Birthday Protocol Successfully Deployed!
+                </span>
+            `;
+        }
+    </script>
+</body>
+</html>
+```
