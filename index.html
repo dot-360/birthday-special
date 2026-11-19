@@ -4,519 +4,943 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Birthday Vanshika | ✨ Sacred Recipe & Celebration</title>
-    
+    <title>Happy Birthday Vanshika Thukral! 🌸🎂</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Fira+Code:wght@400;500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
                         lavender: {
-                            50: '#faf7fc',
-                            100: '#f4eef9',
-                            200: '#e8dbf2',
-                            300: '#d5bfe6',
-                            400: '#bd9cd6',
-                            500: '#a379c3',
-                            600: '#885ca8',
-                            700: '#70488d',
-                            800: '#5c3c74',
-                            900: '#4d335f',
+                            50: '#f9f6ff',
+                            100: '#f2eaff',
+                            200: '#e4d4fe',
+                            300: '#cfb3fc',
+                            400: '#b485f8',
+                            500: '#9b6ef3',
+                            600: '#8347e7',
+                            700: '#6b3fa0',
+                            800: '#583383',
+                            900: '#46286a',
                         },
-                        cream: '#FDFBF7',
+                        cream: {
+                            100: '#fffdf5',
+                            200: '#fff9e6',
+                            300: '#fff3cd',
+                        },
                         gold: {
-                            DEFAULT: '#D4AF37',
-                            light: '#F3E5AB',
-                            dark: '#AA820A',
-                        },
-                        charcoal: '#2D2A32'
+                            300: '#f6e05e',
+                            400: '#ecc94b',
+                            500: '#d69e2e',
+                            600: '#b7791f',
+                        }
                     },
                     fontFamily: {
-                        serif: ['"Cormorant Garamond"', 'serif'],
-                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
-                        mono: ['"Fira Code"', 'monospace'],
-                    },
-                    animation: {
-                        'spin-slow': 'spin 20s linear infinite',
-                        'float': 'float 6s ease-in-out infinite',
-                        'pulse-glow': 'pulseGlow 3s ease-in-out infinite',
-                        'shimmer': 'shimmer 2.5s infinite',
-                    },
-                    keyframes: {
-                        float: {
-                            '0%, 100%': { transform: 'translateY(0px) rotate(0deg)' },
-                            '50%': { transform: 'translateY(-10px) rotate(2deg)' },
-                        },
-                        pulseGlow: {
-                            '0%, 100%': { opacity: '0.6', filter: 'drop-shadow(0 0 15px rgba(212, 175, 55, 0.4))' },
-                            '50%': { opacity: '1', filter: 'drop-shadow(0 0 25px rgba(212, 175, 55, 0.8))' },
-                        },
-                        shimmer: {
-                            '100%': { transform: 'translateX(100%)' },
-                        }
+                        sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+                        serif: ['Georgia', 'Cambria', 'serif'],
                     }
                 }
             }
         }
     </script>
-
+    <!-- Google Font for elegant headers -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        /* Custom Styles & Card Flip Effects */
         body {
-            background-color: #FDFBF7;
-            color: #2D2A32;
-            overflow-x: hidden;
             font-family: 'Plus Jakarta Sans', sans-serif;
+            background: linear-gradient(135deg, #f5f0ff 0%, #e8ddff 40%, #f7f2ff 70%, #ede3ff 100%);
+            min-height: 100vh;
+            color: #4a2c70;
+            overflow-x: hidden;
         }
-
-        /* Glassmorphism utility */
+        .font-cinzel {
+            font-family: 'Cinzel', serif;
+        }
+        /* Glassmorphism Styles */
         .glass-card {
-            background: rgba(244, 238, 249, 0.65);
+            background: rgba(255, 255, 255, 0.65);
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
-            border: 1px solid rgba(212, 175, 55, 0.25);
-            box-shadow: 0 10px 30px -10px rgba(112, 72, 141, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            box-shadow: 0 8px 32px 0 rgba(107, 63, 160, 0.12);
         }
-
-        .glass-terminal {
-            background: rgba(30, 25, 38, 0.92);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(212, 175, 55, 0.3);
-            box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.4);
+        .glass-card-gold {
+            background: rgba(255, 253, 245, 0.75);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(212, 175, 55, 0.4);
+            box-shadow: 0 10px 35px 0 rgba(183, 121, 31, 0.15);
         }
-
-        /* Perspective for 3D flip cards */
-        .perspective-1000 {
-            perspective: 1000px;
+        .glass-button {
+            background: linear-gradient(135deg, rgba(155, 110, 243, 0.85), rgba(107, 63, 160, 0.9));
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            box-shadow: 0 4px 15px rgba(107, 63, 160, 0.25);
+            transition: all 0.3s ease;
         }
-
-        .flip-card-inner {
-            transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
-            transform-style: preserve-3d;
+        .glass-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(107, 63, 160, 0.35);
         }
-
-        .flip-card.flipped .flip-card-inner {
-            transform: rotateY(180deg);
+        /* Candle Flame Animation */
+        @keyframes flameFlicker {
+            0%, 100% { transform: scale(1) rotate(-1deg); opacity: 0.95; filter: drop-shadow(0 0 8px #f6e05e); }
+            50% { transform: scale(1.1) rotate(1.5deg); opacity: 1; filter: drop-shadow(0 0 12px #ecc94b); }
+            75% { transform: scale(0.95) rotate(-0.5deg); opacity: 0.9; filter: drop-shadow(0 0 6px #d69e2e); }
         }
-
-        .flip-card-front, .flip-card-back {
-            backface-visibility: hidden;
-            -webkit-backface-visibility: hidden;
+        .flame-active {
+            animation: flameFlicker 1.2s infinite ease-in-out;
+            transform-origin: bottom center;
         }
-
-        .flip-card-back {
-            transform: rotateY(180deg);
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
         }
-
-        /* Canvas overlay */
-        #particleCanvas {
+        ::-webkit-scrollbar-track {
+            background: #f5f0ff;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cfb3fc;
+            border-radius: 4px;
+        }
+        /* Floating Canvas */
+        #petalCanvas {
             position: fixed;
             top: 0;
             left: 0;
-            width: 100vw;
-            height: 100vh;
+            width: 100%;
+            height: 100%;
             pointer-events: none;
-            z-index: 20;
+            z-index: 1;
         }
-
-        /* Lotus SVG watermark background */
-        .bg-lotus-pattern {
-            background-image: radial-gradient(circle at 50% 50%, rgba(232, 219, 242, 0.4) 0%, transparent 70%);
+        /* Modal Backdrop */
+        .modal-backdrop {
+            background: rgba(53, 26, 82, 0.4);
+            backdrop-filter: blur(8px);
         }
-
-        /* Custom Scrollbar */
-        ::-webkit-scrollbar {
-            width: 6px;
+        /* Umbrella Shake */
+        @keyframes umbrellaOpen {
+            0% { transform: scale(0.8) rotate(-10deg); opacity: 0; }
+            50% { transform: scale(1.1) rotate(5deg); }
+            100% { transform: scale(1) rotate(0deg); opacity: 1; }
         }
-        ::-webkit-scrollbar-track {
-            background: #FDFBF7;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #d5bfe6;
-            border-radius: 999px;
+        .umbrella-anim {
+            animation: umbrellaOpen 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
         }
     </style>
 </head>
-<body class="relative min-h-screen selection:bg-lavender-200 selection:text-lavender-900">
+<body class="relative min-h-screen pb-16 pt-4 px-3 sm:px-6">
 
-    <!-- Interactive Canvas Particle Background -->
-    <canvas id="particleCanvas"></canvas>
+    <!-- Floating Background Canvas for Lavender Petals & Lotus Blossoms -->
+    <canvas id="petalCanvas"></canvas>
 
-    <!-- Background Mandala / Lotus Watermark SVG -->
-    <div class="fixed inset-0 pointer-events-none flex items-center justify-center opacity-10 z-0 overflow-hidden">
-        <svg class="w-[800px] h-[800px] text-lavender-700 animate-spin-slow" viewBox="0 0 100 100" fill="currentColor">
-            <path d="M50 0 C55 25, 75 45, 100 50 C75 55, 55 75, 50 100 C45 75, 25 55, 0 50 C25 45, 45 25, 50 0 Z"/>
-            <circle cx="50" cy="50" r="30" fill="none" stroke="currentColor" stroke-width="0.5" stroke-dasharray="2 2"/>
-            <circle cx="50" cy="50" r="15" fill="none" stroke="currentColor" stroke-width="0.5"/>
-        </svg>
+    <!-- Top Sound Toggle Button -->
+    <div class="fixed top-4 right-4 z-50">
+        <button id="soundToggleBtn" onclick="toggleAudio()" class="p-3 rounded-full glass-card text-lavender-800 hover:text-lavender-900 transition-all flex items-center gap-2 shadow-lg hover:scale-105 active:scale-95" title="Toggle Peaceful Chimes">
+            <span id="soundIcon" class="text-xl">🔔</span>
+            <span id="soundText" class="text-xs font-semibold pr-1 hidden sm:inline text-lavender-900">Sound On</span>
+        </button>
     </div>
 
     <!-- Main Container -->
-    <main class="relative z-10 max-w-4xl mx-auto px-4 py-8 sm:py-12 flex flex-col items-center gap-12 sm:gap-16">
+    <main class="relative z-10 max-w-4xl mx-auto space-y-8 sm:space-y-12 my-4">
 
-        <!-- Top Header & Language Tag -->
-        <header class="w-full text-center flex flex-col items-center pt-2">
-            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass-card border border-gold/40 text-xs font-medium text-lavender-800 tracking-wider uppercase mb-6 shadow-sm">
-                <span class="w-2 h-2 rounded-full bg-gold animate-ping"></span>
-                <span>August 24 • Indian Standard Time (IST)</span>
-            </div>
+        <!-- HEADER & HERO SECTION -->
+        <header class="text-center space-y-4 pt-6 px-2">
+            <!-- Delicate Lotus & Lavender SVG Icon -->
+            <div class="flex justify-center items-center gap-3">
+                <!-- Lavender Sprig Left SVG -->
+                <svg class="w-8 h-8 text-lavender-500 transform -scale-x-100" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M12 22C12 22 10 16 10 12C10 8 12 2 12 2" stroke-linecap="round"/>
+                    <ellipse cx="8" cy="6" rx="2" ry="3" fill="#cfb3fc" opacity="0.8"/>
+                    <ellipse cx="14" cy="9" rx="2" ry="3" fill="#9b6ef3" opacity="0.8"/>
+                    <ellipse cx="7" cy="12" rx="2" ry="3" fill="#b485f8" opacity="0.8"/>
+                    <ellipse cx="13" cy="15" rx="2" ry="3" fill="#8347e7" opacity="0.8"/>
+                </svg>
 
-            <!-- Sacred Combined Emblem: Lotus + Whisk + Code Sparks -->
-            <div class="relative group my-4 cursor-pointer" onclick="triggerEmblemMagic()" title="Tap for spiritual resonance">
-                <div class="w-28 h-28 sm:w-32 sm:h-32 rounded-full glass-card flex items-center justify-center p-4 border-2 border-gold/40 animate-pulse-glow shadow-xl relative overflow-hidden">
-                    <div class="absolute inset-0 bg-gradient-to-tr from-lavender-200/40 via-transparent to-gold/20 opacity-50"></div>
-                    
-                    <!-- Emblem SVG -->
-                    <svg class="w-16 h-16 sm:w-20 sm:h-20 text-lavender-800 transition-transform duration-500 group-hover:scale-110" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5">
-                        <!-- Lotus Base -->
-                        <path d="M32 46 C24 46 16 38 14 30 C20 30 28 34 32 40 C36 34 44 30 50 30 C48 38 40 46 32 46 Z" fill="rgba(163, 121, 195, 0.2)" stroke="#885ca8"/>
-                        <path d="M32 44 C20 44 10 32 18 20 C24 26 28 34 32 44 Z" stroke="#D4AF37"/>
-                        <path d="M32 44 C44 44 54 32 46 20 C40 26 36 34 32 44 Z" stroke="#D4AF37"/>
-                        <!-- Central Crown / Whisk hybrid -->
-                        <path d="M32 12 L32 38" stroke="#885ca8" stroke-width="2" stroke-linecap="round"/>
-                        <path d="M26 18 C26 28 32 36 32 36 C32 36 38 28 38 18 C38 12 32 10 32 10 C32 10 26 12 26 18 Z" stroke="#D4AF37" fill="rgba(212, 175, 55, 0.15)"/>
-                        <!-- Sparkles -->
-                        <circle cx="32" cy="8" r="1.5" fill="#D4AF37"/>
-                        <circle cx="18" cy="14" r="1" fill="#885ca8"/>
-                        <circle cx="46" cy="14" r="1" fill="#885ca8"/>
+                <!-- Center Sacred Lotus SVG -->
+                <div class="p-3 rounded-full bg-white/70 shadow-md border border-lavender-200">
+                    <svg class="w-10 h-10 text-lavender-600" viewBox="0 0 24 24" fill="none">
+                        <path d="M12 4C10 7 6 9 6 13C6 16.3137 8.68629 19 12 19C15.3137 19 18 16.3137 18 13C18 9 14 7 12 4Z" fill="#e4d4fe" stroke="#8347e7" stroke-width="1.2"/>
+                        <path d="M12 8C10.5 10 7.5 11.5 7.5 14.5C7.5 17 9.5 18.5 12 18.5C14.5 18.5 16.5 17 16.5 14.5C16.5 11.5 13.5 10 12 8Z" fill="#cfb3fc" stroke="#6b3fa0" stroke-width="1.2"/>
+                        <path d="M12 12C11 13 9 14 9 15.5C9 17 10.3 18 12 18C13.7 18 15 17 15 15.5C15 14 13 13 12 12Z" fill="#ecc94b"/>
                     </svg>
                 </div>
-                <!-- Soft Subtitle Prompt -->
-                <p class="text-[11px] text-lavender-700/80 tracking-widest uppercase mt-2 font-mono">✦ Tap Emblem to Ring Bell ✦</p>
+
+                <!-- Lavender Sprig Right SVG -->
+                <svg class="w-8 h-8 text-lavender-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M12 22C12 22 10 16 10 12C10 8 12 2 12 2" stroke-linecap="round"/>
+                    <ellipse cx="8" cy="6" rx="2" ry="3" fill="#cfb3fc" opacity="0.8"/>
+                    <ellipse cx="14" cy="9" rx="2" ry="3" fill="#9b6ef3" opacity="0.8"/>
+                    <ellipse cx="7" cy="12" rx="2" ry="3" fill="#b485f8" opacity="0.8"/>
+                    <ellipse cx="13" cy="15" rx="2" ry="3" fill="#8347e7" opacity="0.8"/>
+                </svg>
             </div>
 
-            <!-- Main Heading -->
-            <h1 class="font-serif text-4xl sm:text-6xl md:text-7xl font-bold text-charcoal tracking-tight leading-tight mt-2">
-                Happy Birthday,<br>
-                <span class="bg-gradient-to-r from-lavender-800 via-purple-700 to-gold-dark bg-clip-text text-transparent italic font-normal">
-                    Vanshika Thukral
+            <!-- Title & Bio Header -->
+            <div class="space-y-2">
+                <span class="inline-block px-4 py-1 rounded-full text-xs font-semibold bg-lavender-200/80 text-lavender-800 tracking-wider uppercase border border-lavender-300">
+                    Celebration of Devotion & Sweetness 🪷
                 </span>
-            </h1>
-            
-            <p class="mt-4 text-base sm:text-lg text-charcoal/80 max-w-lg font-light leading-relaxed">
-                Chef, Baker & Spiritual Soul ✨ Crafting sweetness, blooming in mindfulness, and bringing harmony to every recipe of life.
-            </p>
+                <h1 class="text-3xl sm:text-5xl font-bold font-cinzel text-lavender-900 tracking-tight">
+                    Vanshika Thukral
+                </h1>
+                <p class="text-sm sm:text-base text-lavender-800 max-w-xl mx-auto font-medium leading-relaxed px-4">
+                    Kind-hearted chef & baking educator from Delhi, spreading warmth through artisan baking and selfless seva at <span class="text-lavender-900 font-semibold underline decoration-lavender-300">Govardhan Ecovillage (GEV)</span>.
+                </p>
+            </div>
+
+            <!-- LIVE IST COUNTDOWN DISPLAY -->
+            <div class="pt-2">
+                <div class="glass-card rounded-2xl p-4 sm:p-6 max-w-lg mx-auto border-2 border-lavender-200 shadow-xl">
+                    <div id="countdownHeader" class="text-xs font-bold text-lavender-700 uppercase tracking-widest mb-3 flex items-center justify-center gap-2">
+                        <svg class="w-4 h-4 text-gold-500 animate-spin" style="animation-duration: 8s;" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <span>Countdown to Nov 24 (IST / Asia/Kolkata)</span>
+                    </div>
+
+                    <!-- Standard Timer Display -->
+                    <div id="timerContainer" class="grid grid-cols-4 gap-2 sm:gap-3 text-center">
+                        <div class="bg-white/80 rounded-xl p-2 sm:p-3 border border-lavender-200 shadow-sm">
+                            <div id="days" class="text-2xl sm:text-4xl font-bold text-lavender-800 font-cinzel">00</div>
+                            <div class="text-[10px] sm:text-xs text-lavender-600 font-semibold uppercase mt-1">Days</div>
+                        </div>
+                        <div class="bg-white/80 rounded-xl p-2 sm:p-3 border border-lavender-200 shadow-sm">
+                            <div id="hours" class="text-2xl sm:text-4xl font-bold text-lavender-800 font-cinzel">00</div>
+                            <div class="text-[10px] sm:text-xs text-lavender-600 font-semibold uppercase mt-1">Hours</div>
+                        </div>
+                        <div class="bg-white/80 rounded-xl p-2 sm:p-3 border border-lavender-200 shadow-sm">
+                            <div id="minutes" class="text-2xl sm:text-4xl font-bold text-lavender-800 font-cinzel">00</div>
+                            <div class="text-[10px] sm:text-xs text-lavender-600 font-semibold uppercase mt-1">Mins</div>
+                        </div>
+                        <div class="bg-white/80 rounded-xl p-2 sm:p-3 border border-lavender-200 shadow-sm">
+                            <div id="seconds" class="text-2xl sm:text-4xl font-bold text-lavender-800 font-cinzel">00</div>
+                            <div class="text-[10px] sm:text-xs text-lavender-600 font-semibold uppercase mt-1">Secs</div>
+                        </div>
+                    </div>
+
+                    <!-- Festive Banner when Nov 24 IST is Active -->
+                    <div id="festiveBanner" class="hidden py-4 text-center space-y-2">
+                        <div class="inline-block text-3xl sm:text-4xl">🎉🎂🌸</div>
+                        <h2 class="text-2xl sm:text-3xl font-bold text-lavender-900 font-cinzel">
+                            Happy Birthday, Vanshika!
+                        </h2>
+                        <p class="text-xs sm:text-sm text-lavender-700 font-medium">
+                            May your year be filled with divine grace, endless baking joy, and rain-proof cloud storage!
+                        </p>
+                    </div>
+
+                    <div class="mt-3 text-[11px] text-lavender-600 flex items-center justify-center gap-1">
+                        <span>🇮🇳 Synced strictly to Indian Standard Time (IST)</span>
+                    </div>
+                </div>
+            </div>
         </header>
 
-        <!-- Live IST Countdown / Celebration Status Banner -->
-        <section class="w-full glass-card rounded-2xl p-6 sm:p-8 border border-gold/30 shadow-lg text-center relative overflow-hidden">
-            <div class="absolute -right-10 -bottom-10 w-32 h-32 bg-lavender-300/30 rounded-full blur-2xl pointer-events-none"></div>
-            
-            <h2 id="timerHeadline" class="font-serif text-xl sm:text-2xl font-semibold text-lavender-900 mb-4 flex items-center justify-center gap-2">
-                <span>✨</span> <span id="timerTitleText">Counting Down to August 24 (IST)</span> <span>✨</span>
-            </h2>
 
-            <!-- Timer Grid -->
-            <div id="countdownGrid" class="grid grid-cols-4 gap-2 sm:gap-4 max-w-md mx-auto my-2">
-                <div class="bg-white/80 rounded-xl p-3 sm:p-4 border border-lavender-200 shadow-sm flex flex-col items-center">
-                    <span id="days" class="font-serif text-2xl sm:text-4xl font-bold text-lavender-800">00</span>
-                    <span class="text-[10px] sm:text-xs font-mono uppercase text-charcoal/60 mt-1">Days</span>
-                </div>
-                <div class="bg-white/80 rounded-xl p-3 sm:p-4 border border-lavender-200 shadow-sm flex flex-col items-center">
-                    <span id="hours" class="font-serif text-2xl sm:text-4xl font-bold text-lavender-800">00</span>
-                    <span class="text-[10px] sm:text-xs font-mono uppercase text-charcoal/60 mt-1">Hours</span>
-                </div>
-                <div class="bg-white/80 rounded-xl p-3 sm:p-4 border border-lavender-200 shadow-sm flex flex-col items-center">
-                    <span id="minutes" class="font-serif text-2xl sm:text-4xl font-bold text-lavender-800">00</span>
-                    <span class="text-[10px] sm:text-xs font-mono uppercase text-charcoal/60 mt-1">Mins</span>
-                </div>
-                <div class="bg-white/80 rounded-xl p-3 sm:p-4 border border-lavender-200 shadow-sm flex flex-col items-center">
-                    <span id="seconds" class="font-serif text-2xl sm:text-4xl font-bold text-gold-dark">00</span>
-                    <span class="text-[10px] sm:text-xs font-mono uppercase text-charcoal/60 mt-1">Secs</span>
-                </div>
+        <!-- SECTION 2: INTERACTIVE VIRTUAL LAVENDER CAKE -->
+        <section class="glass-card rounded-3xl p-6 sm:p-8 border border-white/80 text-center relative overflow-hidden">
+            <div class="space-y-2 mb-4">
+                <span class="text-xs font-bold text-lavender-600 uppercase tracking-wider">Interactive Seva & Treat</span>
+                <h2 class="text-2xl sm:text-3xl font-bold text-lavender-900 font-cinzel">The GEV Lavender Birthday Cake</h2>
+                <p class="text-xs sm:text-sm text-lavender-700 max-w-md mx-auto">
+                    Baked with love & devotion. Tap the glowing candle flame to light or make a birthday wish!
+                </p>
             </div>
 
-            <p id="timerSubtext" class="text-xs text-charcoal/60 mt-4 font-mono">
-                Synced precisely to Asia/Kolkata (UTC+05:30)
-            </p>
+            <!-- Virtual SVG Cake Container -->
+            <div class="relative max-w-xs mx-auto py-6 flex flex-col items-center justify-center">
+                <div id="cakeInteractive" onclick="toggleCandle()" class="cursor-pointer group relative transition-transform duration-300 hover:scale-105 active:scale-95">
+                    
+                    <!-- SVG Lavender Layered Cake -->
+                    <svg class="w-64 h-64 sm:w-72 sm:h-72 drop-shadow-xl" viewBox="0 0 300 300" fill="none">
+                        <!-- Cake Stand Base -->
+                        <ellipse cx="150" cy="270" rx="110" ry="15" fill="#e8ddff" stroke="#9b6ef3" stroke-width="2"/>
+                        <path d="M135 270 L138 290 L162 290 L165 270 Z" fill="#cfb3fc" stroke="#8347e7"/>
+                        <ellipse cx="150" cy="290" rx="25" ry="5" fill="#9b6ef3"/>
+
+                        <!-- Bottom Layer Cake -->
+                        <path d="M60 200 C60 200 60 245 60 245 C60 255 100 265 150 265 C200 265 240 255 240 245 C240 245 240 200 240 200 Z" fill="#9b6ef3"/>
+                        <ellipse cx="150" cy="200" rx="90" ry="20" fill="#b485f8"/>
+                        <!-- Lavender Drips Bottom -->
+                        <path d="M60 200 Q75 220 90 200 Q105 225 120 200 Q135 220 150 200 Q165 225 180 200 Q195 220 210 200 Q225 225 240 200" fill="#e4d4fe" opacity="0.8"/>
+
+                        <!-- Middle Layer Cake -->
+                        <path d="M80 150 C80 150 80 190 80 190 C80 200 110 210 150 210 C190 210 220 200 220 190 C220 190 220 150 220 150 Z" fill="#b485f8"/>
+                        <ellipse cx="150" cy="150" rx="70" ry="16" fill="#cfb3fc"/>
+                        <!-- Cream Frosting Accent -->
+                        <path d="M80 150 Q95 168 110 150 Q125 170 140 150 Q155 168 170 150 Q185 170 200 150 Q215 165 220 150" fill="#fff9e6"/>
+
+                        <!-- Top Layer Cake -->
+                        <path d="M100 100 C100 100 100 140 100 140 C100 148 120 156 150 156 C180 156 200 148 200 140 C200 140 200 100 200 100 Z" fill="#cfb3fc"/>
+                        <ellipse cx="150" cy="100" rx="50" ry="12" fill="#f2eaff"/>
+
+                        <!-- Gold & Berry Sugar Decorations -->
+                        <circle cx="115" cy="102" r="3" fill="#d69e2e"/>
+                        <circle cx="135" cy="106" r="4" fill="#9b6ef3"/>
+                        <circle cx="150" cy="104" r="3" fill="#d69e2e"/>
+                        <circle cx="165" cy="106" r="4" fill="#8347e7"/>
+                        <circle cx="185" cy="101" r="3" fill="#d69e2e"/>
+
+                        <!-- Decorative Lavender Flowers on Cake Base -->
+                        <circle cx="75" cy="240" r="5" fill="#f2eaff"/>
+                        <circle cx="225" cy="240" r="5" fill="#f2eaff"/>
+
+                        <!-- Candle Stick -->
+                        <rect x="146" y="55" width="8" height="45" rx="3" fill="url(#candleGradient)" stroke="#d69e2e" stroke-width="1"/>
+                        <line x1="150" y1="55" x2="150" y2="46" stroke="#4a2c70" stroke-width="2" stroke-linecap="round"/>
+
+                        <!-- Gradients -->
+                        <defs>
+                            <linearGradient id="candleGradient" x1="0" y1="0" x2="1" y2="0">
+                                <stop offset="0%" stop-color="#fff9e6"/>
+                                <stop offset="50%" stop-color="#ecc94b"/>
+                                <stop offset="100%" stop-color="#f2eaff"/>
+                            </linearGradient>
+                        </defs>
+
+                        <!-- CANDLE FLAME GROUP (Toggled with JS) -->
+                        <g id="candleFlameGroup" class="flame-active">
+                            <!-- Outer Glow -->
+                            <circle cx="150" cy="32" r="16" fill="#f6e05e" opacity="0.35"/>
+                            <!-- Outer Flame -->
+                            <path d="M150 18 C144 28 143 38 150 46 C157 38 156 28 150 18 Z" fill="#ecc94b"/>
+                            <!-- Inner Flame -->
+                            <path d="M150 25 C147 32 146 38 150 43 C154 38 153 32 150 25 Z" fill="#fff9e6"/>
+                        </g>
+
+                        <!-- Smoke effect when blown out -->
+                        <g id="candleSmokeGroup" class="hidden">
+                            <path d="M150 40 Q145 30 152 20 T148 5" stroke="#a0aec0" stroke-width="2" fill="none" opacity="0.6" stroke-linecap="round"/>
+                        </g>
+                    </svg>
+                </div>
+
+                <div id="cakeStatusText" class="mt-3 text-xs sm:text-sm font-semibold text-lavender-800 bg-white/70 px-4 py-1.5 rounded-full border border-lavender-200 shadow-sm">
+                    ✨ Candle is glowing! Tap to blow out a wish.
+                </div>
+            </div>
         </section>
 
-        <!-- SECTION 2: Software Engineer Terminal & Sacred Recipe Compiler Card -->
-        <section class="w-full glass-terminal rounded-2xl p-5 sm:p-8 text-left shadow-2xl relative border border-gold/30">
-            <!-- Terminal Header -->
-            <div class="flex items-center justify-between pb-4 border-b border-white/10 mb-6">
-                <div class="flex items-center gap-2">
-                    <div class="w-3 h-3 rounded-full bg-red-400"></div>
-                    <div class="w-3 h-3 rounded-full bg-yellow-400"></div>
-                    <div class="w-3 h-3 rounded-full bg-green-400"></div>
-                    <span class="ml-2 font-mono text-xs text-lavender-300/70">vanshika_soul_recipe.v24.0.ts</span>
+
+        <!-- SECTION 3: SACRED WISDOM & MINDFULNESS GENERATOR -->
+        <section class="glass-card rounded-3xl p-6 sm:p-8 border border-white/80 space-y-6">
+            <div class="text-center space-y-2">
+                <span class="text-xs font-bold text-lavender-600 uppercase tracking-wider">Mindfulness & Seva Reflection</span>
+                <h2 class="text-2xl sm:text-3xl font-bold text-lavender-900 font-cinzel">Sacred Wisdom & Blessings</h2>
+                <p class="text-xs sm:text-sm text-lavender-700 max-w-md mx-auto">
+                    Authentic verses & spiritual guidance honoring your pure heart and sweet baking seva at GEV.
+                </p>
+            </div>
+
+            <!-- Card Display for Verses -->
+            <div id="wisdomCard" class="glass-card-gold rounded-2xl p-6 sm:p-8 border-2 border-gold-300/60 shadow-lg text-center space-y-4 transition-all duration-500">
+                <div id="wisdomSource" class="text-xs font-bold text-gold-600 uppercase tracking-widest flex items-center justify-center gap-1.5">
+                    <span>🪷 Bhagavad Gita 9.26</span>
                 </div>
-                <span class="font-mono text-[10px] text-gold/80 bg-gold/10 px-2 py-0.5 rounded border border-gold/20">STATUS: READY_TO_DEPLOY</span>
+
+                <blockquote id="wisdomSanskrit" class="text-lg sm:text-xl italic font-serif text-lavender-900 leading-relaxed font-semibold">
+                    "patram puspam phalam toyam yo me bhaktya prayacchati..."
+                </blockquote>
+
+                <p id="wisdomTranslation" class="text-xs sm:text-sm text-lavender-800 italic leading-relaxed max-w-xl mx-auto">
+                    "If one offers Me with love and devotion a leaf, a flower, a fruit or water, I will accept it."
+                </p>
+
+                <hr class="border-gold-300/40 my-3 w-1/2 mx-auto">
+
+                <p id="wisdomReflection" class="text-xs sm:text-sm text-lavender-900 font-medium leading-relaxed bg-white/60 p-4 rounded-xl border border-gold-300/30">
+                    💛 <strong>Personal Seva Reflection:</strong> Vanshika, when you prepare artisan loaves and baked treats with love for the devotees and guests at Govardhan Ecovillage, every ingredient becomes an offering of sweet devotion.
+                </p>
+
+                <div id="wisdomCountdownNote" class="text-[11px] font-bold text-lavender-700 pt-1">
+                    ✨ Celebration Note: Preparing hearts for November 24!
+                </div>
             </div>
 
-            <!-- Monospace Code Recipe Block -->
-            <div class="font-mono text-xs sm:text-sm text-lavender-100 space-y-2 leading-relaxed bg-black/30 p-4 rounded-xl border border-white/5 overflow-x-auto">
-                <p><span class="text-purple-400">const</span> <span class="text-gold-light">vanshikaThukral</span> = <span class="text-purple-400">new</span> <span class="text-yellow-200">ArtisanSoul</span>({</p>
-                <p class="pl-4"><span class="text-lavender-300">name</span>: <span class="text-green-300">"Vanshika Thukral"</span>,</p>
-                <p class="pl-4"><span class="text-lavender-300">professions</span>: [<span class="text-green-300">"Chef"</span>, <span class="text-green-300">"Master Baker"</span>],</p>
-                <p class="pl-4"><span class="text-lavender-300">vibration</span>: <span class="text-green-300">"Spiritual Clarity & Mindful Peace 🧘‍♀️✨"</span>,</p>
-                <p class="pl-4"><span class="text-lavender-300">ingredients</span>: [<span class="text-green-300">"Warmth"</span>, <span class="text-green-300">"Precision"</span>, <span class="text-green-300">"Patience"</span>, <span class="text-green-300">"Pure Heart"</span>],</p>
-                <p class="pl-4"><span class="text-lavender-300">bugCount</span>: <span class="text-blue-300">0</span>,</p>
-                <p class="pl-4"><span class="text-lavender-300">happinessUptime</span>: <span class="text-blue-300">Infinity</span></p>
-                <p>});</p>
-            </div>
-
-            <!-- CTA Button -->
-            <div class="mt-8 flex flex-col items-center">
-                <button id="deployBtn" onclick="deployBlessing()" class="group relative inline-flex items-center gap-3 px-8 py-4 rounded-xl bg-gradient-to-r from-gold via-yellow-500 to-gold-dark text-charcoal font-semibold text-sm sm:text-base shadow-lg hover:shadow-gold/30 transition-all duration-300 active:scale-95 overflow-hidden">
-                    <span class="relative z-10 flex items-center gap-2 font-medium">
-                        <svg class="w-5 h-5 text-charcoal" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                        </svg>
-                        Deploy Birthday Blessing & Wish
-                    </span>
-                    <div class="absolute inset-0 bg-white/30 transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+            <!-- Action Button -->
+            <div class="text-center">
+                <button onclick="generateWisdom()" class="glass-button text-white px-6 py-3 rounded-full font-bold text-sm tracking-wide flex items-center justify-center gap-2 mx-auto">
+                    <span>✨ Receive Sacred Verse & Reflection</span>
+                    <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                    </svg>
                 </button>
-                <p class="text-[11px] font-mono text-lavender-300/60 mt-3 text-center">Triggers Web Audio singing bowl frequency + celebratory burst</p>
+            </div>
+        </section>
+
+
+        <!-- SECTION 4: CLOUD STORAGE WEATHER FORECAST (INSIDE JOKE) -->
+        <section class="glass-card rounded-3xl p-6 sm:p-8 border border-white/80 space-y-5 text-center relative">
+            <div class="space-y-1">
+                <span class="inline-block px-3 py-0.5 rounded-full text-[10px] font-bold bg-amber-100 text-amber-800 uppercase tracking-wider border border-amber-200">
+                    📱 Delhi Storage Warning System
+                </span>
+                <h2 class="text-2xl sm:text-3xl font-bold text-lavender-900 font-cinzel">Cloud Storage Weather Forecast</h2>
             </div>
 
-            <!-- Revealing Heartfelt Poetic Wish Letter -->
-            <div id="blessingLetter" class="hidden mt-8 pt-8 border-t border-white/10 text-lavender-100 font-sans leading-relaxed space-y-4 animate-fade-in">
-                <div class="p-6 rounded-xl bg-lavender-900/50 border border-gold/20 text-cream">
-                    <h3 class="font-serif text-2xl text-gold mb-3 italic">Dearest Vanshika,</h3>
-                    
-                    <p class="text-sm sm:text-base text-lavender-100/90 leading-relaxed">
-                        Just as the finest sourdough requires patience, exact temperature, and loving care, or the delicate layers of a pastry require passion and artistic balance—may your year ahead rise to absolute perfection.
-                    </p>
-                    
-                    <p class="text-sm sm:text-base text-lavender-100/90 leading-relaxed mt-3">
-                        In the kitchen of life, you blend culinary artistry with a serene spiritual aura. May every dish you craft bring joy to others, every moment of mindfulness bring deep peace to your soul, and may your code of life run without a single glitch or warning.
-                    </p>
+            <!-- Inside Joke Explanation Box -->
+            <div class="bg-amber-50/80 rounded-2xl p-4 border border-amber-200/80 max-w-lg mx-auto text-left space-y-2">
+                <div class="flex items-center gap-2 text-amber-900 font-bold text-xs sm:text-sm">
+                    <span class="text-base">⚠️</span>
+                    <span>Phone Memory Status: 99.9% FULL</span>
+                </div>
+                <p class="text-xs text-amber-900/80 leading-relaxed italic">
+                    "When your phone storage is completely packed with photos of bread crusts and GEV recipes, someone suggests trying 'Cloud Storage'... but you get worried: <strong>Be careful—if rain comes in Delhi, you won't be able to see your data!</strong>"
+                </p>
+            </div>
 
-                    <div class="mt-6 pt-4 border-t border-gold/20 flex items-center justify-between font-serif italic text-gold text-sm sm:text-base">
-                        <span>With boundless warmth & clean code ✨</span>
-                        <span>August 24 IST</span>
+            <!-- Weather Widget Container -->
+            <div id="weatherContainer" class="bg-white/80 rounded-2xl p-6 max-w-md mx-auto border border-lavender-200 shadow-md space-y-4">
+                <div class="flex items-center justify-between text-xs font-bold text-lavender-700 border-b border-lavender-100 pb-2">
+                    <span>LOC: New Delhi / GEV</span>
+                    <span id="cloudStatusBadge" class="text-amber-600 bg-amber-100 px-2 py-0.5 rounded-full">⚡ Cloud Rain Threat</span>
+                </div>
+
+                <!-- Animated Cloud & Rain Illustration -->
+                <div id="weatherGraphic" class="relative py-4 flex flex-col items-center justify-center min-h-[120px]">
+                    
+                    <!-- Rain Clouds SVG -->
+                    <div id="rainCloudGroup" class="transition-all duration-700">
+                        <svg class="w-24 h-24 text-slate-400 animate-bounce" style="animation-duration: 3s;" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96z"/>
+                        </svg>
+                        <!-- Rain Drops -->
+                        <div class="flex justify-center gap-3 -mt-2">
+                            <span class="text-blue-400 animate-pulse text-xs">💧</span>
+                            <span class="text-blue-500 animate-pulse text-xs" style="animation-delay: 0.2s;">💧</span>
+                            <span class="text-blue-400 animate-pulse text-xs" style="animation-delay: 0.4s;">💧</span>
+                        </div>
                     </div>
+
+                    <!-- Protected Sunshine Umbrella (Hidden initially) -->
+                    <div id="sunshineGroup" class="hidden flex-col items-center space-y-2 umbrella-anim">
+                        <div class="relative">
+                            <!-- Golden Shield Umbrella SVG -->
+                            <svg class="w-20 h-20 text-gold-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                                <path d="M12 2C6.48 2 2 6.48 2 12C2 12 7 10 12 10C17 10 22 12 22 12C22 6.48 17.52 2 12 2Z" fill="#ecc94b" stroke="#b7791f"/>
+                                <path d="M12 10V20C12 21.1 11.1 22 10 22" stroke="#b7791f" stroke-linecap="round"/>
+                            </svg>
+                            <!-- Rainbow Arc -->
+                            <div class="text-xl absolute -top-3 -right-3">🌈</div>
+                        </div>
+                        <span class="text-xs font-bold text-emerald-700 bg-emerald-100 px-3 py-1 rounded-full border border-emerald-200">
+                            🛡️ Data Protected! 100% Monsoon Proof!
+                        </span>
+                    </div>
+                </div>
+
+                <div id="weatherMessage" class="text-xs text-lavender-800 font-medium">
+                    🌧️ Rain clouds detected over Delhi! Cloud storage data is at risk of getting wet!
+                </div>
+
+                <!-- Deploy Umbrella Button -->
+                <button id="umbrellaBtn" onclick="deployUmbrella()" class="w-full py-2.5 px-4 rounded-xl font-bold text-xs bg-amber-500 hover:bg-amber-600 text-white shadow-md transition-all active:scale-95 flex items-center justify-center gap-2">
+                    <span>☂️ Deploy Cloud Umbrella Protection</span>
+                </button>
+            </div>
+        </section>
+
+
+        <!-- SECTION 5: NOVEMBER 24 BIRTHDAY SURPRISE BOX -->
+        <section class="glass-card-gold rounded-3xl p-6 sm:p-10 border-2 border-gold-400/80 text-center space-y-6 relative overflow-hidden shadow-2xl">
+            <!-- Decorative Ribbon Corner SVG -->
+            <div class="absolute -top-10 -right-10 w-28 h-28 bg-gold-400/20 rotate-45 pointer-events-none"></div>
+
+            <div class="space-y-2">
+                <span class="inline-block px-4 py-1 rounded-full text-xs font-bold bg-gold-300/80 text-gold-900 uppercase tracking-widest border border-gold-400">
+                    🎁 Official November 24 Unlock
+                </span>
+                <h2 class="text-2xl sm:text-4xl font-bold text-lavender-900 font-cinzel">
+                    Vanshika's Birthday Surprise Vault
+                </h2>
+                <p class="text-xs sm:text-sm text-lavender-800 max-w-md mx-auto font-medium">
+                    Contains your official lifetime GEV certificates, cloud pass, and funny birthday truths!
+                </p>
+            </div>
+
+            <!-- Big Interactive Gift Box Graphic -->
+            <div class="py-4">
+                <div class="relative inline-block cursor-pointer group" onclick="attemptUnlockSurprise()">
+                    <div class="text-6xl sm:text-7xl transform transition-transform duration-300 group-hover:scale-110 group-active:scale-95">
+                        🎁
+                    </div>
+                    <div class="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-16 h-3 bg-gold-600/20 rounded-full filter blur-sm"></div>
+                </div>
+            </div>
+
+            <!-- Main Trigger Button -->
+            <div>
+                <button id="openBoxBtn" onclick="attemptUnlockSurprise()" class="glass-button text-white px-8 py-4 rounded-full font-bold text-base tracking-wide shadow-xl flex items-center justify-center gap-3 mx-auto transform hover:scale-105 active:scale-95 bg-gradient-to-r from-gold-500 via-lavender-600 to-lavender-800">
+                    <span>✨ Open Your November 24 Birthday Surprise</span>
+                    <span class="text-lg">🔓</span>
+                </button>
+            </div>
+
+            <!-- PRE-BIRTHDAY / UNLOCKED CONTENT CONTAINER -->
+            <!-- Unlocked Content (Hidden until Nov 24 or ?preview=true) -->
+            <div id="unlockedSurpriseContent" class="hidden space-y-8 pt-6 border-t border-gold-300/60 text-left">
+                
+                <div class="text-center space-y-1">
+                    <span class="text-2xl">🎉🎊✨</span>
+                    <h3 class="text-xl sm:text-2xl font-bold font-cinzel text-lavender-900">
+                        Official Birthday Keepsakes Unlocked!
+                    </h3>
+                </div>
+
+                <!-- Certificate 1: Cloud Storage Rain Pass -->
+                <div class="glass-card rounded-2xl p-6 border-2 border-gold-400/80 shadow-md relative bg-gradient-to-br from-white/90 to-lavender-50/90 space-y-3">
+                    <div class="flex justify-between items-start border-b border-gold-300/50 pb-3">
+                        <div>
+                            <div class="text-[10px] font-bold text-gold-600 uppercase tracking-widest">Official Certification</div>
+                            <h4 class="text-lg font-bold text-lavender-900 font-cinzel">Lifetime Rain-Proof Cloud Pass</h4>
+                        </div>
+                        <span class="text-2xl">☁️☔</span>
+                    </div>
+
+                    <div class="space-y-2 text-xs sm:text-sm text-lavender-800">
+                        <p><strong>Issued To:</strong> Vanshika Thukral</p>
+                        <p><strong>Storage Capacity:</strong> Unlimited (∞ GB)</p>
+                        <p><strong>Special Clause:</strong> Guaranteed 100% waterproof protection against Delhi monsoons, cloudbursts, and heavy rain so your photos & baking notes never drown.</p>
+                    </div>
+
+                    <div class="pt-2 flex items-center justify-between text-[11px] text-lavender-600 font-semibold border-t border-lavender-100">
+                        <span>Verified by: Delhi Rain Protection Board</span>
+                        <span class="text-gold-600 font-bold">STATUS: ACTIVE 🛡️</span>
+                    </div>
+                </div>
+
+                <!-- Certificate 2: GEV Master Baker & Kindness Ambassador -->
+                <div class="glass-card rounded-2xl p-6 border-2 border-lavender-400/80 shadow-md relative bg-gradient-to-br from-white/90 to-cream-100/90 space-y-3">
+                    <div class="flex justify-between items-start border-b border-lavender-300/50 pb-3">
+                        <div>
+                            <div class="text-[10px] font-bold text-lavender-600 uppercase tracking-widest">Honour of Seva</div>
+                            <h4 class="text-lg font-bold text-lavender-900 font-cinzel">GEV Master Baker & Kindness Ambassador</h4>
+                        </div>
+                        <span class="text-2xl">🍞🪷</span>
+                    </div>
+
+                    <div class="space-y-2 text-xs sm:text-sm text-lavender-800">
+                        <p><strong>Awarded To:</strong> Vanshika Thukral</p>
+                        <p><strong>Citation:</strong> In recognition of extraordinary dedication to baking education, sweet hospitality, and spreading warmth and smiles across Govardhan Ecovillage and beyond.</p>
+                    </div>
+
+                    <div class="pt-2 flex items-center justify-between text-[11px] text-lavender-600 font-semibold border-t border-lavender-100">
+                        <span>Signed with Devotion & Admiration</span>
+                        <span class="text-lavender-700 font-bold">LIFETIME HONOR 🌟</span>
+                    </div>
+                </div>
+
+                <!-- Cute & Funny Birthday Truth Generator -->
+                <div class="bg-white/80 rounded-2xl p-5 border border-gold-300 text-center space-y-3">
+                    <div class="text-xs font-bold text-gold-600 uppercase tracking-wider">Interactive Fun</div>
+                    <h4 class="text-base font-bold text-lavender-900 font-cinzel">Vanshika's Cute & Funny Birthday Truths</h4>
+                    
+                    <div id="truthDisplay" class="bg-lavender-50 p-4 rounded-xl text-xs sm:text-sm text-lavender-900 font-medium italic min-h-[60px] flex items-center justify-center">
+                        "Science proves that calories in birthday cakes baked with devotion and laughter contain 0 calories."
+                    </div>
+
+                    <button onclick="nextBirthdayTruth()" class="py-2 px-5 rounded-full font-bold text-xs bg-lavender-600 hover:bg-lavender-700 text-white transition-all active:scale-95">
+                        🎲 Tap for Another Cute Birthday Truth
+                    </button>
                 </div>
             </div>
         </section>
 
-        <!-- SECTION 3: 'Ingredients of a Wonderful Year' Interactive Flip Cards -->
-        <section class="w-full">
-            <div class="text-center mb-8">
-                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-charcoal">Ingredients of Your New Year</h2>
-                <p class="text-sm text-charcoal/70 mt-1">Tap each card to reveal the sacred blessing inside</p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-
-                <!-- Card 1: Artisan Craft (Culinary) -->
-                <div class="flip-card perspective-1000 h-64 cursor-pointer" onclick="this.classList.toggle('flipped')">
-                    <div class="flip-card-inner relative w-full h-full rounded-2xl glass-card border border-gold/30 shadow-md">
-                        <!-- Front -->
-                        <div class="flip-card-front absolute inset-0 p-6 flex flex-col items-center justify-center text-center">
-                            <div class="w-14 h-14 rounded-full bg-lavender-200/80 flex items-center justify-center text-lavender-800 mb-4 shadow-inner">
-                                <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v18m0-18C8 3 4 7 4 12c0 3 2 6 5 7.5M12 3c4 0 8 4 8 9 0 3-2 6-5 7.5" />
-                                    <circle cx="12" cy="12" r="3" fill="#D4AF37"/>
-                                </svg>
-                            </div>
-                            <h3 class="font-serif text-2xl font-bold text-lavender-900">Artisan Craft</h3>
-                            <p class="text-xs text-charcoal/60 mt-1 font-mono">Chef & Baker Passion</p>
-                            <span class="mt-4 text-[11px] text-gold-dark font-medium uppercase tracking-wider">✦ Tap to flip ✦</span>
-                        </div>
-                        <!-- Back -->
-                        <div class="flip-card-back absolute inset-0 p-6 rounded-2xl bg-gradient-to-br from-lavender-800 to-purple-900 text-white flex flex-col justify-center text-center">
-                            <h4 class="font-serif text-xl text-gold mb-2 font-semibold">The Culinary Touch</h4>
-                            <p class="text-xs sm:text-sm text-lavender-100 leading-relaxed">
-                                May every loaf proof perfectly, every dessert inspire wonder, and every flavor profile reflect your unique artistic soul.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card 2: Inner Radiance (Spiritual) -->
-                <div class="flip-card perspective-1000 h-64 cursor-pointer" onclick="this.classList.toggle('flipped')">
-                    <div class="flip-card-inner relative w-full h-full rounded-2xl glass-card border border-gold/30 shadow-md">
-                        <!-- Front -->
-                        <div class="flip-card-front absolute inset-0 p-6 flex flex-col items-center justify-center text-center">
-                            <div class="w-14 h-14 rounded-full bg-lavender-200/80 flex items-center justify-center text-lavender-800 mb-4 shadow-inner">
-                                <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9 9 0 100-18 9 9 0 000 18z" />
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v8m-4-4h8" />
-                                </svg>
-                            </div>
-                            <h3 class="font-serif text-2xl font-bold text-lavender-900">Inner Radiance</h3>
-                            <p class="text-xs text-charcoal/60 mt-1 font-mono">Spiritual Journey</p>
-                            <span class="mt-4 text-[11px] text-gold-dark font-medium uppercase tracking-wider">✦ Tap to flip ✦</span>
-                        </div>
-                        <!-- Back -->
-                        <div class="flip-card-back absolute inset-0 p-6 rounded-2xl bg-gradient-to-br from-purple-900 to-lavender-900 text-white flex flex-col justify-center text-center">
-                            <h4 class="font-serif text-xl text-gold mb-2 font-semibold">Lotus Serenity</h4>
-                            <p class="text-xs sm:text-sm text-lavender-100 leading-relaxed">
-                                Like a blooming lotus, may your presence stay centered, peaceful, and grounded in luminous clarity throughout 2024 and beyond.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card 3: Infinite Uptime (Tech/Soul Harmony) -->
-                <div class="flip-card perspective-1000 h-64 cursor-pointer" onclick="this.classList.toggle('flipped')">
-                    <div class="flip-card-inner relative w-full h-full rounded-2xl glass-card border border-gold/30 shadow-md">
-                        <!-- Front -->
-                        <div class="flip-card-front absolute inset-0 p-6 flex flex-col items-center justify-center text-center">
-                            <div class="w-14 h-14 rounded-full bg-lavender-200/80 flex items-center justify-center text-lavender-800 mb-4 shadow-inner">
-                                <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                                </svg>
-                            </div>
-                            <h3 class="font-serif text-2xl font-bold text-lavender-900">Infinite Joy</h3>
-                            <p class="text-xs text-charcoal/60 mt-1 font-mono">Soul & Code Harmony</p>
-                            <span class="mt-4 text-[11px] text-gold-dark font-medium uppercase tracking-wider">✦ Tap to flip ✦</span>
-                        </div>
-                        <!-- Back -->
-                        <div class="flip-card-back absolute inset-0 p-6 rounded-2xl bg-gradient-to-br from-lavender-800 to-charcoal text-white flex flex-col justify-center text-center">
-                            <h4 class="font-serif text-xl text-gold mb-2 font-semibold">Zero Bugs, Full Joy</h4>
-                            <p class="text-xs sm:text-sm text-lavender-100 leading-relaxed">
-                                May your year execute with maximum happiness, optimized high frequency, sweet memories, and endless laughter.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- Interactive Audio Control / Chime Button -->
-        <div class="flex flex-wrap items-center justify-center gap-4 py-4">
-            <button onclick="playSingingBowl()" class="glass-card px-5 py-2.5 rounded-full border border-gold/30 text-xs font-medium text-lavender-900 hover:bg-lavender-200/50 flex items-center gap-2 transition-all shadow-sm">
-                <span>🔔</span> Play Sacred Singing Bowl Tone
-            </button>
-            <button onclick="triggerPetalBurst()" class="glass-card px-5 py-2.5 rounded-full border border-gold/30 text-xs font-medium text-lavender-900 hover:bg-lavender-200/50 flex items-center gap-2 transition-all shadow-sm">
-                <span>🌸</span> Release Gold & Lavender Petals
-            </button>
-        </div>
-
-        <!-- Footer -->
-        <footer class="w-full text-center py-8 border-t border-lavender-200/60 text-xs text-charcoal/60 font-mono flex flex-col items-center gap-2">
-            <p>Crafted with care & clean code for <span class="text-lavender-800 font-semibold font-sans">Vanshika Thukral</span> ✨</p>
-            <p class="text-[10px] text-charcoal/40">August 24 Celebration • IST Timezone</p>
+        <!-- FOOTER -->
+        <footer class="text-center text-xs text-lavender-600 space-y-1 pt-6 border-t border-lavender-200/60">
+            <p>Made with warmth & devotion for Vanshika Thukral 🪷</p>
+            <p class="text-[10px] text-lavender-500">Asia/Kolkata (IST) Synced • Govardhan Ecovillage Seva Celebration</p>
         </footer>
 
     </main>
 
-    <!-- JavaScript Logic -->
+
+    <!-- NO PEEKING EARLY MODAL (Triggers before Nov 24 IST when no ?preview=true) -->
+    <div id="noPeekingModal" class="fixed inset-0 z-50 modal-backdrop hidden flex items-center justify-center p-4">
+        <div class="glass-card-gold rounded-3xl p-6 sm:p-8 max-w-sm w-full border-2 border-gold-400 text-center space-y-4 shadow-2xl relative animate-bounce" style="animation-duration: 0.5s;">
+            <div class="text-5xl">🙈🎂</div>
+            
+            <div class="space-y-1">
+                <span class="text-[10px] font-bold text-amber-700 bg-amber-100 px-3 py-0.5 rounded-full uppercase tracking-wider">
+                    Strictly Sealed Until Nov 24 IST
+                </span>
+                <h3 class="text-xl font-bold text-lavender-900 font-cinzel">No Peeking Early!</h3>
+            </div>
+
+            <!-- Dynamic Teasing Message Box -->
+            <div id="peekingMessageText" class="bg-white/90 p-4 rounded-2xl text-xs sm:text-sm text-lavender-900 font-medium leading-relaxed border border-gold-300 min-h-[90px] flex items-center justify-center">
+                <!-- Message inserted via JS -->
+            </div>
+
+            <div class="pt-2 flex flex-col gap-2">
+                <button onclick="cyclePeekingMessage()" class="w-full py-2.5 px-4 rounded-xl font-bold text-xs bg-lavender-600 hover:bg-lavender-700 text-white shadow-md active:scale-95 transition-all">
+                    😜 Try Clicking Again!
+                </button>
+                <button onclick="closeNoPeekingModal()" class="w-full py-2 px-4 rounded-xl font-semibold text-xs text-lavender-700 hover:bg-lavender-200/50 transition-all">
+                    Okay, I'll Wait Patiently! 🪷
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- JAVASCRIPT LOGIC -->
     <script>
-        /* ===================================================
-           1. IST COUNTDOWN TIMER LOGIC
-           Target: August 24, 00:00:00 IST
-           =================================================== */
-        function updateISTCountdown() {
-            const now = new Date();
-            
-            // Calculate current date in IST (UTC + 5.5 hours)
-            const utcTime = now.getTime() + (now.getTimezoneOffset() * 60000);
-            const istOffsetMs = 5.5 * 3600 * 1000;
-            const currentISTDate = new Date(utcTime + istOffsetMs);
-            
-            const currentYearIST = currentISTDate.getFullYear();
-            
-            // Target: August 24 00:00:00 IST of current year
-            let targetIST = new Date(Date.UTC(currentYearIST, 7, 23, 18, 30, 0)); // Aug 23 18:30 UTC = Aug 24 00:00 IST
-            
-            // If Aug 24 IST has passed for this year, target next year
-            if (currentISTDate > new Date(Date.UTC(currentYearIST, 7, 24, 18, 29, 59))) {
-                targetIST = new Date(Date.UTC(currentYearIST + 1, 7, 23, 18, 30, 0));
+        /* =========================================================
+           1. WEB AUDIO API SYNTHESIZER (PEACEFUL SINGING BOWL / CHIMES)
+           ========================================================= */
+        let audioCtx = null;
+        let soundEnabled = true;
+
+        function initAudio() {
+            if (!audioCtx) {
+                audioCtx = new (window.AudioContext || window.webkitAudioContext)();
             }
+            if (audioCtx.state === 'suspended') {
+                audioCtx.resume();
+            }
+        }
 
-            const diff = targetIST.getTime() - now.getTime();
+        function playChime(freq = 528, duration = 1.2) {
+            if (!soundEnabled) return;
+            try {
+                initAudio();
+                const osc = audioCtx.createOscillator();
+                const gain = audioCtx.createGain();
 
-            // Check if TODAY is Aug 24 in IST
-            const isAug24 = (currentISTDate.getMonth() === 7 && currentISTDate.getDate() === 24);
+                osc.type = 'sine';
+                osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
 
-            if (isAug24) {
-                document.getElementById('timerTitleText').innerText = "🎉 TODAY IS VANSHIKA'S CELEBRATION! 🎉";
-                document.getElementById('countdownGrid').innerHTML = `
-                    <div class="col-span-4 bg-gradient-to-r from-gold/20 via-lavender-200 to-gold/20 p-4 rounded-xl border border-gold/40 text-lavender-900 font-serif text-xl sm:text-2xl font-bold animate-pulse">
-                        ✨ Happy Birthday Vanshika! Wishing you pure joy today! ✨
-                    </div>
-                `;
-                document.getElementById('timerSubtext').innerText = "Celebration Mode Active in IST";
+                // Gentle sine envelope
+                gain.gain.setValueAtTime(0.01, audioCtx.currentTime);
+                gain.gain.exponentialRampToValueAtTime(0.25, audioCtx.currentTime + 0.1);
+                gain.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + duration);
+
+                osc.connect(gain);
+                gain.connect(audioCtx.destination);
+
+                osc.start();
+                osc.stop(audioCtx.currentTime + duration);
+            } catch (e) {
+                console.log("Audio play blocked or not supported", e);
+            }
+        }
+
+        function playChord() {
+            if (!soundEnabled) return;
+            // Pentatonic blissful chime chord (528Hz, 639Hz, 741Hz)
+            playChime(528, 1.8);
+            setTimeout(() => playChime(639, 1.6), 150);
+            setTimeout(() => playChime(741, 1.4), 300);
+        }
+
+        function toggleAudio() {
+            soundEnabled = !soundEnabled;
+            const soundIcon = document.getElementById('soundIcon');
+            const soundText = document.getElementById('soundText');
+            if (soundEnabled) {
+                soundIcon.textContent = '🔔';
+                soundText.textContent = 'Sound On';
+                playChime(639, 0.8);
+            } else {
+                soundIcon.textContent = '🔕';
+                soundText.textContent = 'Muted';
+            }
+        }
+
+
+        /* =========================================================
+           2. IST TIME & LIVE COUNTDOWN ENGINE
+           ========================================================= */
+        // Calculate current IST Date object
+        function getISTNow() {
+            const now = new Date();
+            // Convert to IST offset string
+            const istString = now.toLocaleString("en-US", { timeZone: "Asia/Kolkata" });
+            return new Date(istString);
+        }
+
+        // Get target November 24 IST Date
+        function getTargetISTDate() {
+            const istNow = getISTNow();
+            let targetYear = istNow.getFullYear();
+            
+            // IST target: Nov 24, 00:00:00
+            let target = new Date(`November 24, ${targetYear} 00:00:00 GMT+0530`);
+
+            // If Nov 24 IST of this year has already passed, target next year
+            if (istNow.getTime() > new Date(`November 24, ${targetYear} 23:59:59 GMT+0530`).getTime()) {
+                target = new Date(`November 24, ${targetYear + 1} 00:00:00 GMT+0530`);
+            }
+            return target;
+        }
+
+        let daysLeftCount = 0;
+
+        function updateCountdown() {
+            const istNow = getISTNow();
+            const targetIST = getTargetISTDate();
+
+            // Check if today is November 24 IST
+            const isTodayNov24 = (istNow.getMonth() === 10 && istNow.getDate() === 24);
+
+            if (isTodayNov24) {
+                document.getElementById('timerContainer').classList.add('hidden');
+                document.getElementById('countdownHeader').classList.add('hidden');
+                document.getElementById('festiveBanner').classList.remove('hidden');
+                daysLeftCount = 0;
                 return;
             }
 
-            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+            const diffMs = targetIST - istNow;
 
-            document.getElementById('days').innerText = String(days).padStart(2, '0');
-            document.getElementById('hours').innerText = String(hours).padStart(2, '0');
-            document.getElementById('minutes').innerText = String(minutes).padStart(2, '0');
-            document.getElementById('seconds').innerText = String(seconds).padStart(2, '0');
-        }
+            if (diffMs <= 0) {
+                document.getElementById('timerContainer').classList.add('hidden');
+                document.getElementById('countdownHeader').classList.add('hidden');
+                document.getElementById('festiveBanner').classList.remove('hidden');
+                daysLeftCount = 0;
+            } else {
+                const days = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((diffMs / (1000 * 60 * 60)) % 24);
+                const minutes = Math.floor((diffMs / (1000 * 60)) % 60);
+                const seconds = Math.floor((diffMs / 1000) % 60);
 
-        setInterval(updateISTCountdown, 1000);
-        updateISTCountdown();
+                daysLeftCount = days;
 
-        /* ===================================================
-           2. WEB AUDIO API - TIBETAN SINGING BOWL SYNTHESIZER
-           =================================================== */
-        let audioCtx = null;
-
-        function playSingingBowl() {
-            try {
-                const AudioContext = window.AudioContext || window.webkitAudioContext;
-                if (!audioCtx) {
-                    audioCtx = new AudioContext();
-                }
-                if (audioCtx.state === 'suspended') {
-                    audioCtx.resume();
-                }
-
-                // Harmonics simulating a peaceful singing bowl (~432Hz base frequency)
-                const baseFreq = 432;
-                const harmonics = [1, 2.01, 3.02, 4.05];
-                const gains = [0.4, 0.2, 0.1, 0.05];
-
-                harmonics.forEach((multiplier, i) => {
-                    const osc = audioCtx.createOscillator();
-                    const gainNode = audioCtx.createGain();
-
-                    osc.type = 'sine';
-                    osc.frequency.setValueAtTime(baseFreq * multiplier, audioCtx.currentTime);
-
-                    // Add subtle low-frequency pitch wobble for resonant warmth
-                    const lfo = audioCtx.createOscillator();
-                    const lfoGain = audioCtx.createGain();
-                    lfo.frequency.setValueAtTime(2 + i, audioCtx.currentTime);
-                    lfoGain.gain.setValueAtTime(1.2, audioCtx.currentTime);
-                    lfo.connect(osc.frequency);
-                    lfo.start();
-
-                    // Envelope: fast gentle attack, long smooth exponential decay
-                    gainNode.gain.setValueAtTime(0.0001, audioCtx.currentTime);
-                    gainNode.gain.exponentialRampToValueAtTime(gains[i], audioCtx.currentTime + 0.15);
-                    gainNode.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + 4.5);
-
-                    osc.connect(gainNode);
-                    gainNode.connect(audioCtx.destination);
-
-                    osc.start();
-                    osc.stop(audioCtx.currentTime + 4.6);
-                });
-            } catch (e) {
-                console.log("Audio Context not allowed without direct interaction", e);
+                document.getElementById('days').textContent = String(days).padStart(2, '0');
+                document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+                document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+                document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
             }
         }
 
-        function triggerEmblemMagic() {
-            playSingingBowl();
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+
+
+        /* =========================================================
+           3. INTERACTIVE LAVENDER CAKE (CANDLE TOGGLE)
+           ========================================================= */
+        let candleLit = true;
+
+        function toggleCandle() {
+            candleLit = !candleLit;
+            const flameGroup = document.getElementById('candleFlameGroup');
+            const smokeGroup = document.getElementById('candleSmokeGroup');
+            const statusText = document.getElementById('cakeStatusText');
+
+            if (candleLit) {
+                flameGroup.classList.remove('hidden');
+                smokeGroup.classList.add('hidden');
+                statusText.innerHTML = '✨ Candle is glowing! Tap to blow out a wish.';
+                playChime(639, 0.8);
+            } else {
+                flameGroup.classList.add('hidden');
+                smokeGroup.classList.remove('hidden');
+                statusText.innerHTML = '💨 Wish made! Candle blown out! Tap to light again.';
+                playChime(396, 1.2);
+                triggerPetalBurst();
+            }
+        }
+
+
+        /* =========================================================
+           4. SACRED WISDOM & MINDFULNESS GENERATOR
+           ========================================================= */
+        const wisdomQuotes = [
+            {
+                source: "🪷 Bhagavad Gita 9.26",
+                sanskrit: "patram puspam phalam toyam yo me bhaktya prayacchati...",
+                translation: "If one offers Me with love and devotion a leaf, a flower, a fruit or water, I will accept it.",
+                reflection: "💛 Personal Seva Reflection: Vanshika, when you prepare artisan loaves and baked treats with love for the devotees and guests at Govardhan Ecovillage, every ingredient becomes an offering of sweet devotion."
+            },
+            {
+                source: "🌸 Bhagavad Gita 2.47",
+                sanskrit: "karmanye vadhikaraste ma phalesu kadacana...",
+                translation: "You have a right to perform your prescribed duty, but you are not entitled to the fruits of action.",
+                reflection: "🍞 Personal Seva Reflection: Baking requires patience, precision, and devotion—letting the dough rise in its own time, serving without attachment, and sharing joy with everyone around."
+            },
+            {
+                source: "🌿 Srimad-Bhagavatam 1.2.6",
+                sanskrit: "sa vai pumsam paro dharmo yato bhaktir adhoksaje...",
+                translation: "The supreme duty for all humanity is that by which men can attain to loving devotional service unto the transcendent Lord.",
+                reflection: "🪷 Personal Seva Reflection: Teaching baking at GEV isn't just about recipes; it's about nourishing souls with kindness, warmth, and spiritual sweetness."
+            },
+            {
+                source: "📿 Radhanath Swami Maharaj",
+                sanskrit: "When we serve with humility and love, the simplest work transforms into divine grace.",
+                translation: "True devotion is found in the heart that seeks to bring comfort and nourishment to others.",
+                reflection: "✨ Personal Seva Reflection: Your bright smile and warm spirit in Delhi and GEV make everyone around you feel valued, cherished, and at peace."
+            },
+            {
+                source: "🙏 Srila Prabhupada",
+                sanskrit: "Devotional service is so sweet that even a little effort never goes in vain.",
+                translation: "Spirituality is practical, joyful, and shared through simple acts of kindness and prasadam.",
+                reflection: "🧁 Personal Seva Reflection: May your baking always bring warmth and spiritual delight to every soul who tastes it!"
+            }
+        ];
+
+        let currentWisdomIdx = 0;
+
+        function generateWisdom() {
+            currentWisdomIdx = (currentWisdomIdx + 1) % wisdomQuotes.length;
+            const quote = wisdomQuotes[currentWisdomIdx];
+
+            const card = document.getElementById('wisdomCard');
+            card.style.opacity = '0.3';
+            card.style.transform = 'translateY(8px)';
+
+            setTimeout(() => {
+                document.getElementById('wisdomSource').innerHTML = `<span>${quote.source}</span>`;
+                document.getElementById('wisdomSanskrit').textContent = `"${quote.sanskrit}"`;
+                document.getElementById('wisdomTranslation').textContent = `"${quote.translation}"`;
+                document.getElementById('wisdomReflection').innerHTML = quote.reflection;
+
+                const noteText = daysLeftCount > 0 
+                    ? `✨ Countdown Note: Only ${daysLeftCount} days left until November 24!`
+                    : `🎉 Today is November 24! Time to celebrate Vanshika!`;
+                document.getElementById('wisdomCountdownNote').textContent = noteText;
+
+                card.style.opacity = '1';
+                card.style.transform = 'translateY(0px)';
+                playChime(528 + (currentWisdomIdx * 40), 1.0);
+            }, 250);
+        }
+
+
+        /* =========================================================
+           5. CLOUD STORAGE WEATHER FORECAST (INSIDE JOKE)
+           ========================================================= */
+        let umbrellaDeployed = false;
+
+        function deployUmbrella() {
+            if (umbrellaDeployed) return;
+            umbrellaDeployed = true;
+
+            const rainGroup = document.getElementById('rainCloudGroup');
+            const sunGroup = document.getElementById('sunshineGroup');
+            const msg = document.getElementById('weatherMessage');
+            const badge = document.getElementById('cloudStatusBadge');
+
+            rainGroup.classList.add('hidden');
+            sunGroup.classList.remove('hidden');
+
+            badge.textContent = "✅ 100% Cloud Protected";
+            badge.className = "text-emerald-700 bg-emerald-100 px-2 py-0.5 rounded-full";
+
+            msg.innerHTML = "✨ <strong>Umbrella Deployed!</strong> Let it rain in Delhi all day—your cloud storage and baking photos are 100% waterproof and secure!";
+
+            document.getElementById('umbrellaBtn').innerHTML = "<span>✅ Cloud Storage Shielded & Rain-Proof!</span>";
+            document.getElementById('umbrellaBtn').className = "w-full py-2.5 px-4 rounded-xl font-bold text-xs bg-emerald-600 text-white cursor-default shadow-md";
+
+            playChord();
             triggerPetalBurst();
         }
 
-        /* ===================================================
-           3. CANVAS PARTICLES & CONFETTI PETAL SYSTEM
-           =================================================== */
-        const canvas = document.getElementById('particleCanvas');
+
+        /* =========================================================
+           6. NOVEMBER 24 BIRTHDAY SURPRISE BOX & PRE-BIRTHDAY LOGIC
+           ========================================================= */
+        const peekingMessages = [
+            "Nice try, Vanshika! But yeast needs time to ferment, and birthday surprises need until Nov 24 IST to bake! 🍞",
+            "Be careful! Opening early might make rain fall on your cloud storage data in Delhi! 🌧️📱",
+            "Patience is the secret ingredient in all great baking at GEV! Only a bit longer to wait! 🧁",
+            "Official GEV Alert: Early peeking detected! Please step away from the gift box! 🚨🪷",
+            "Did you know? Trying to peek early burns 0 calories and increases curiosity by 200%! 😜",
+            "No early peeking! Your rain-proof cloud storage warranty will be voided! ☁️☂️",
+            "Vanshika, even the finest sourdough loaf can't be rushed out of the oven early! 🥐",
+            "Nov 24 IST is strictly locked! Go practice a new baking recipe while you wait! 🎂✨"
+        ];
+
+        let peekingMsgIdx = 0;
+
+        function isUnlockedByDateOrQuery() {
+            // Check URL search params for ?preview=true
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.get('preview') === 'true') {
+                return true;
+            }
+
+            // Check if current IST date is Nov 24
+            const istNow = getISTNow();
+            return (istNow.getMonth() === 10 && istNow.getDate() === 24);
+        }
+
+        function attemptUnlockSurprise() {
+            if (isUnlockedByDateOrQuery()) {
+                // Unlock full celebration
+                document.getElementById('unlockedSurpriseContent').classList.remove('hidden');
+                document.getElementById('openBoxBtn').classList.add('hidden');
+                playChord();
+                triggerPetalBurst();
+                window.scrollTo({
+                    top: document.getElementById('unlockedSurpriseContent').offsetTop - 20,
+                    behavior: 'smooth'
+                });
+            } else {
+                // Show early peeking modal
+                showNoPeekingModal();
+            }
+        }
+
+        function showNoPeekingModal() {
+            peekingMsgIdx = 0;
+            updatePeekingText();
+            document.getElementById('noPeekingModal').classList.remove('hidden');
+            playChime(396, 0.8);
+        }
+
+        function closeNoPeekingModal() {
+            document.getElementById('noPeekingModal').classList.add('hidden');
+        }
+
+        function cyclePeekingMessage() {
+            peekingMsgIdx = (peekingMsgIdx + 1) % peekingMessages.length;
+            updatePeekingText();
+            playChime(432 + (peekingMsgIdx * 30), 0.6);
+        }
+
+        function updatePeekingText() {
+            let msg = peekingMessages[peekingMsgIdx];
+            if (daysLeftCount > 0) {
+                msg += ` (Only ${daysLeftCount} days left!)`;
+            }
+            document.getElementById('peekingMessageText').textContent = msg;
+        }
+
+
+        /* Cute & Funny Birthday Truth Generator */
+        const birthdayTruths = [
+            "Science proves that calories in birthday cakes baked with devotion contain exactly 0 calories. Eat freely! 🎂",
+            "Delhi rain has a 0% chance of touching your cloud storage backups today—umbrella verified! ☔",
+            "Baking at GEV is officially 40% flour, 10% yeast, and 50% pure love & enthusiasm! 🍞",
+            "It is scientifically impossible to feel stressed while smelling fresh bread or lavender flowers. 🪷",
+            "Your phone storage might be full, but your heart is even fuller with love from everyone around you! 💛"
+        ];
+
+        let truthIdx = 0;
+
+        function nextBirthdayTruth() {
+            truthIdx = (truthIdx + 1) % birthdayTruths.length;
+            const display = document.getElementById('truthDisplay');
+            display.style.opacity = '0.2';
+            setTimeout(() => {
+                display.textContent = `"${birthdayTruths[truthIdx]}"`;
+                display.style.opacity = '1';
+                playChime(639, 0.8);
+            }, 200);
+        }
+
+
+        /* =========================================================
+           7. FLOATING LAVENDER PETALS & LOTUS BACKGROUND CANVAS
+           ========================================================= */
+        const canvas = document.getElementById('petalCanvas');
         const ctx = canvas.getContext('2d');
 
         let width = canvas.width = window.innerWidth;
@@ -527,43 +951,31 @@
             height = canvas.height = window.innerHeight;
         });
 
-        class Particle {
-            constructor(x, y, isBurst = false) {
-                this.x = x || Math.random() * width;
-                this.y = y || (isBurst ? height / 2 : Math.random() * height);
-                this.isBurst = isBurst;
-                
-                this.size = Math.random() * (isBurst ? 8 : 4) + 2;
-                this.speedX = isBurst ? (Math.random() - 0.5) * 12 : (Math.random() - 0.5) * 0.8;
-                this.speedY = isBurst ? (Math.random() - 0.7) * 12 : Math.random() * 0.8 + 0.3;
-                this.gravity = isBurst ? 0.15 : 0;
-                
-                // Color palette: Gold, Lavender, Rose
-                const colors = ['#D4AF37', '#F3E5AB', '#bd9cd6', '#e8dbf2', '#C58B88'];
-                this.color = colors[Math.floor(Math.random() * colors.length)];
-                
-                this.opacity = Math.random() * 0.8 + 0.2;
+        class Petal {
+            constructor() {
+                this.reset();
+            }
+
+            reset() {
+                this.x = Math.random() * width;
+                this.y = Math.random() * -height;
+                this.size = Math.random() * 8 + 6;
+                this.speedY = Math.random() * 1.2 + 0.6;
+                this.speedX = Math.random() * 0.8 - 0.4;
                 this.rotation = Math.random() * Math.PI * 2;
-                this.rotationSpeed = (Math.random() - 0.5) * 0.08;
-                this.life = isBurst ? 100 : Infinity;
-                this.maxLife = 100;
+                this.rotSpeed = (Math.random() - 0.5) * 0.02;
+                this.opacity = Math.random() * 0.5 + 0.3;
+                this.color = ['#e4d4fe', '#cfb3fc', '#b485f8', '#9b6ef3', '#fff9e6'][Math.floor(Math.random() * 5)];
+                this.isLotus = Math.random() < 0.2;
             }
 
             update() {
-                this.x += this.speedX;
                 this.y += this.speedY;
-                this.speedY += this.gravity;
-                this.rotation += this.rotationSpeed;
+                this.x += Math.sin(this.y * 0.01) + this.speedX;
+                this.rotation += this.rotSpeed;
 
-                if (this.isBurst) {
-                    this.life--;
-                    this.opacity = Math.max(0, this.life / this.maxLife);
-                } else {
-                    // Loop floating particles
-                    if (this.y > height) {
-                        this.y = -10;
-                        this.x = Math.random() * width;
-                    }
+                if (this.y > height + 20) {
+                    this.reset();
                 }
             }
 
@@ -574,73 +986,85 @@
                 ctx.globalAlpha = this.opacity;
                 ctx.fillStyle = this.color;
 
-                // Draw petal / diamond particle
                 ctx.beginPath();
-                ctx.moveTo(0, -this.size);
-                ctx.quadraticCurveTo(this.size, 0, 0, this.size);
-                ctx.quadraticCurveTo(-this.size, 0, 0, -this.size);
+                if (this.isLotus) {
+                    // Small Lotus Petal Shape
+                    ctx.moveTo(0, -this.size);
+                    ctx.quadraticCurveTo(this.size, 0, 0, this.size);
+                    ctx.quadraticCurveTo(-this.size, 0, 0, -this.size);
+                } else {
+                    // Delicate Oval Lavender Petal
+                    ctx.ellipse(0, 0, this.size * 0.5, this.size, 0, 0, Math.PI * 2);
+                }
                 ctx.fill();
-
                 ctx.restore();
             }
         }
 
-        const particles = [];
+        const petals = Array.from({ length: 35 }, () => new Petal());
 
-        // Ambient ambient floating particles
-        for (let i = 0; i < 40; i++) {
-            particles.push(new Particle());
-        }
+        // Particle Burst Effect for Interactions
+        let burstParticles = [];
 
         function triggerPetalBurst() {
             const centerX = width / 2;
-            const centerY = height / 3;
-            for (let i = 0; i < 70; i++) {
-                particles.push(new Particle(centerX, centerY, true));
+            const centerY = height / 2;
+            for (let i = 0; i < 40; i++) {
+                const angle = Math.random() * Math.PI * 2;
+                const speed = Math.random() * 6 + 2;
+                burstParticles.push({
+                    x: centerX,
+                    y: centerY,
+                    vx: Math.cos(angle) * speed,
+                    vy: Math.sin(angle) * speed,
+                    size: Math.random() * 8 + 4,
+                    color: ['#f6e05e', '#cfb3fc', '#9b6ef3', '#ffffff', '#e4d4fe'][Math.floor(Math.random() * 5)],
+                    life: 1.0
+                });
             }
         }
 
         function animateCanvas() {
             ctx.clearRect(0, 0, width, height);
-            
-            for (let i = particles.length - 1; i >= 0; i--) {
-                const p = particles[i];
-                p.update();
-                p.draw();
 
-                if (p.isBurst && p.life <= 0) {
-                    particles.splice(i, 1);
+            // Draw Background Petals
+            petals.forEach(petal => {
+                petal.update();
+                petal.draw();
+            });
+
+            // Draw Burst Particles
+            for (let i = burstParticles.length - 1; i >= 0; i--) {
+                const p = burstParticles[i];
+                p.x += p.vx;
+                p.y += p.vy;
+                p.life -= 0.025;
+
+                if (p.life <= 0) {
+                    burstParticles.splice(i, 1);
+                    continue;
                 }
+
+                ctx.save();
+                ctx.globalAlpha = p.life;
+                ctx.fillStyle = p.color;
+                ctx.beginPath();
+                ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+                ctx.fill();
+                ctx.restore();
             }
+
             requestAnimationFrame(animateCanvas);
         }
 
         window.onload = function() {
             animateCanvas();
+            // Automatically unveil if ?preview=true is in URL on page load
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.get('preview') === 'true') {
+                console.log("Preview mode enabled via URL parameter ?preview=true");
+            }
         };
-
-        /* ===================================================
-           4. DEPLOY BLESSING BUTTON LOGIC
-           =================================================== */
-        function deployBlessing() {
-            playSingingBowl();
-            triggerPetalBurst();
-
-            const letter = document.getElementById('blessingLetter');
-            letter.classList.remove('hidden');
-            
-            // Scroll smoothly to letter
-            setTimeout(() => {
-                letter.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-            }, 200);
-
-            const btn = document.getElementById('deployBtn');
-            btn.innerHTML = `
-                <span class="relative z-10 flex items-center gap-2">
-                    ✨ Birthday Protocol Successfully Deployed!
-                </span>
-            `;
-        }
     </script>
 </body>
 </html>
