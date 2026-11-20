@@ -295,7 +295,7 @@
                 <div id="wishToast" class="opacity-0 transition-opacity duration-500 mt-5 p-4 rounded-2xl bg-lavender-100/90 border border-lavender-300 text-center max-w-md">
                     <p class="font-serif text-lg font-bold text-plum-900">✨ Sacred Birthday Wish Released! ✨</p>
                     <p class="text-xs sm:text-sm text-plum-700 mt-1">
-                        "May Sri Sri Radha Madhav sweeten your devotional life, bless your hands in baking, and fulfill your aspirational journey under Sri Guru's guidance."
+                        "May Sri Sri Radha Gopinatha sweeten your devotional life, bless your hands in baking, and fulfill your aspirational journey under Sri Guru's guidance."
                     </p>
                 </div>
             </div>
@@ -606,7 +606,187 @@
                     </div>
                 </div>
 
-                <!-- 2) Digital Keepsake Certificates (Side-by-Side on Desktop, Stacked Mobile) -->
+                <!-- 2) Real-Life Birthday Gift Reveal Card -->
+                <div class="p-6 sm:p-8 rounded-3xl bg-gradient-to-br from-rose-50/90 via-cream-50 to-lavender-100/80 border-2 border-lavender-300 shadow-md relative overflow-hidden">
+                    <div class="text-center mb-6">
+                        <span class="inline-flex items-center gap-1.5 text-[11px] uppercase font-bold tracking-widest text-purple-700 bg-white/80 border border-lavender-200 px-3 py-1 rounded-full shadow-sm">
+                            <span>🎀</span> Real-Life Birthday Keepsake
+                        </span>
+                        <h3 class="font-serif text-2xl sm:text-3xl font-bold text-plum-900 mt-2">
+                            Your Personalized Birthday Gift
+                        </h3>
+                        <p class="text-xs sm:text-sm text-plum-700/80 mt-1 max-w-md mx-auto">
+                            Something thoughtful, custom-made with your name and favorite lavender florals, to travel with you everywhere.
+                        </p>
+                    </div>
+
+                    <!-- Interactive Unwrap Cover (taps away to reveal gift preview) -->
+                    <div id="giftWrapCover" class="p-6 sm:p-8 rounded-2xl bg-gradient-to-r from-lavender-200/80 via-purple-100/90 to-rose-100/80 border-2 border-dashed border-lavender-400 text-center space-y-4">
+                        <div class="text-5xl animate-bounce">🎁</div>
+                        <div>
+                            <p class="font-serif text-xl font-bold text-plum-900">A Custom-Made Gift Awaits You!</p>
+                            <p class="text-xs sm:text-sm text-plum-700/90 mt-1">Tap below to unwrap a sneak peek of your personalized birthday gift.</p>
+                        </div>
+                        <button id="unwrapGiftBtn" class="px-6 py-3 rounded-full bg-gradient-to-r from-lavender-600 to-purple-600 hover:from-lavender-700 hover:to-purple-700 text-white font-semibold text-sm shadow-lg shadow-lavender-500/25 hover:scale-105 active:scale-95 transition-all inline-flex items-center gap-2">
+                            <span>🎀</span> Unwrap Gift Details
+                        </button>
+                    </div>
+
+                    <!-- Revealed Gift Showcase -->
+                    <div id="giftRevealContent" class="hidden grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+                        <!-- Custom SVG Illustration of the Personalized Peach & Lavender Organizer Case -->
+                        <div class="flex justify-center">
+                            <div class="relative p-3 bg-white/80 rounded-3xl border border-lavender-200 shadow-lg max-w-[270px] w-full">
+                                <svg viewBox="0 0 260 265" class="w-full h-auto drop-shadow-md" role="img" aria-label="Personalized blush-peach zippered organizer case with Vanshika written in red script and a girl with a lavender bow and bouquet of lavender roses">
+                                    <defs>
+                                        <linearGradient id="casePeach" x1="0%" y1="0%" x2="100%" y2="100%">
+                                            <stop offset="0%" stop-color="#FCE4D6"/>
+                                            <stop offset="55%" stop-color="#F7D5C4"/>
+                                            <stop offset="100%" stop-color="#EFC2AD"/>
+                                        </linearGradient>
+                                        <linearGradient id="hairShine" x1="0%" y1="0%" x2="100%" y2="100%">
+                                            <stop offset="0%" stop-color="#2A2433"/>
+                                            <stop offset="50%" stop-color="#141118"/>
+                                            <stop offset="100%" stop-color="#2D2638"/>
+                                        </linearGradient>
+                                        <clipPath id="caseClip">
+                                            <rect x="18" y="24" width="224" height="224" rx="40"/>
+                                        </clipPath>
+                                    </defs>
+
+                                    <!-- Top Handle & Zipper Pull -->
+                                    <rect x="64" y="13" width="122" height="12" rx="6" fill="#F2C8B4" stroke="#D8A790" stroke-width="2"/>
+                                    <rect x="48" y="14" width="20" height="8" rx="4" fill="#64748B"/>
+                                    <circle cx="52" cy="18" r="3" fill="#CBD5E1"/>
+
+                                    <!-- Main Rounded Square Case Body -->
+                                    <rect x="16" y="22" width="228" height="228" rx="42" fill="#E3B39C"/>
+                                    <rect x="18" y="24" width="224" height="224" rx="40" fill="url(#casePeach)" stroke="#E5B7A0" stroke-width="2"/>
+                                    <!-- Subtle Inner Border Sheen -->
+                                    <rect x="24" y="30" width="212" height="212" rx="35" fill="none" stroke="#FFF4EE" stroke-width="1.5" opacity="0.65"/>
+
+                                    <!-- Clipped Artwork Inside Case -->
+                                    <g clip-path="url(#caseClip)">
+                                        <!-- Personalized Name Script -->
+                                        <text x="44" y="108" font-family="'Cormorant Garamond', serif" font-style="italic" font-weight="700" font-size="31" fill="#D9483B" letter-spacing="0.5">Vanshika</text>
+
+                                        <!-- Bouquet Leaves -->
+                                        <g fill="#2E6F5E">
+                                            <ellipse cx="116" cy="166" rx="5" ry="12" transform="rotate(-18 116 166)"/>
+                                            <ellipse cx="102" cy="182" rx="5" ry="12" transform="rotate(-48 102 182)"/>
+                                            <ellipse cx="94" cy="206" rx="5" ry="12" transform="rotate(-70 94 206)"/>
+                                            <ellipse cx="104" cy="232" rx="5" ry="12" transform="rotate(-110 104 232)"/>
+                                            <ellipse cx="132" cy="172" rx="5" ry="12" transform="rotate(15 132 172)"/>
+                                            <ellipse cx="145" cy="238" rx="5" ry="12" transform="rotate(35 145 238)"/>
+                                        </g>
+
+                                        <!-- Lavender Dress & Shoulder -->
+                                        <path d="M150 146 C158 140, 174 140, 184 148 L210 250 L138 250 L144 185 Z" fill="#A875D6"/>
+                                        <path d="M154 147 C164 150, 175 152, 180 148 L195 250 L152 250 Z" fill="#905BC2" opacity="0.55"/>
+                                        <!-- Skin Tone Neck & Cheek/Arm -->
+                                        <path d="M148 150 C142 162, 140 176, 146 186 L154 182 C150 172, 152 162, 155 153 Z" fill="#F2C0A2"/>
+                                        <ellipse cx="158" cy="108" rx="14" ry="18" fill="#F2C0A2"/>
+                                        <!-- Subtle Ear & Pearl Earring -->
+                                        <circle cx="164" cy="112" r="2.2" fill="#FFFDF9"/>
+
+                                        <!-- Bouquet of Lavender Roses -->
+                                        <g>
+                                            <!-- Rose Helper Clusters -->
+                                            <g transform="translate(120,185)">
+                                                <circle r="11" fill="#A78BFA" stroke="#7C3AED" stroke-width="1"/>
+                                                <path d="M-5 -2 C-2 -6, 4 -6, 5 -1 C6 3, 1 6, -3 4 C-6 2, -4 -3, 0 -2" fill="none" stroke="#EDE9FE" stroke-width="1.3"/>
+                                            </g>
+                                            <g transform="translate(140,180)">
+                                                <circle r="10.5" fill="#B794F4" stroke="#7C3AED" stroke-width="1"/>
+                                                <path d="M-4 -2 C-1 -5, 4 -5, 4 -1 C5 3, 0 5, -3 3" fill="none" stroke="#EDE9FE" stroke-width="1.3"/>
+                                            </g>
+                                            <g transform="translate(107,203)">
+                                                <circle r="11" fill="#C4B5FD" stroke="#7C3AED" stroke-width="1"/>
+                                                <path d="M-5 -2 C-2 -6, 4 -6, 5 -1 C6 3, 1 6, -3 4" fill="none" stroke="#F5F3FF" stroke-width="1.3"/>
+                                            </g>
+                                            <g transform="translate(128,204)">
+                                                <circle r="12" fill="#9F7AEA" stroke="#6D28D9" stroke-width="1"/>
+                                                <path d="M-5 -2 C-2 -6, 4 -6, 5 -1 C6 3, 1 6, -3 4" fill="none" stroke="#EDE9FE" stroke-width="1.4"/>
+                                            </g>
+                                            <g transform="translate(148,202)">
+                                                <circle r="11" fill="#B794F4" stroke="#7C3AED" stroke-width="1"/>
+                                                <path d="M-4 -2 C-1 -5, 4 -5, 4 -1 C5 3, 0 5, -3 3" fill="none" stroke="#EDE9FE" stroke-width="1.3"/>
+                                            </g>
+                                            <g transform="translate(115,224)">
+                                                <circle r="11.5" fill="#A78BFA" stroke="#6D28D9" stroke-width="1"/>
+                                                <path d="M-5 -2 C-2 -6, 4 -6, 5 -1 C6 3, 1 6, -3 4" fill="none" stroke="#EDE9FE" stroke-width="1.3"/>
+                                            </g>
+                                            <g transform="translate(137,225)">
+                                                <circle r="11.5" fill="#C4B5FD" stroke="#7C3AED" stroke-width="1"/>
+                                                <path d="M-5 -2 C-2 -6, 4 -6, 5 -1 C6 3, 1 6, -3 4" fill="none" stroke="#F5F3FF" stroke-width="1.3"/>
+                                            </g>
+                                        </g>
+
+                                        <!-- Long Flowing Dark Wavy Hair -->
+                                        <path d="M150 92 C152 64, 186 58, 200 78 C214 96, 214 128, 222 152 C230 176, 224 210, 208 232 C194 248, 174 244, 166 226 C158 208, 152 178, 160 150 C166 132, 166 116, 156 104 C150 98, 149 95, 150 92 Z" fill="url(#hairShine)"/>
+                                        <!-- Hair Wave Highlights -->
+                                        <path d="M186 80 C198 100, 198 128, 208 154 C215 174, 210 202, 198 220" fill="none" stroke="#4C4459" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+                                        <path d="M174 108 C184 128, 178 156, 188 182 C194 198, 188 218, 178 230" fill="none" stroke="#4C4459" stroke-width="2" stroke-linecap="round" opacity="0.65"/>
+                                        <path d="M164 134 C170 156, 166 184, 172 208" fill="none" stroke="#4C4459" stroke-width="1.8" stroke-linecap="round" opacity="0.6"/>
+
+                                        <!-- Signature Lavender Hair Bow -->
+                                        <g transform="translate(197, 94) rotate(-14)">
+                                            <!-- Left Wing -->
+                                            <path d="M-2 0 C-14 -12, -22 -8, -20 4 C-18 12, -10 10, -2 2 Z" fill="#C4A1F5" stroke="#8B5CF6" stroke-width="1.2"/>
+                                            <!-- Right Wing -->
+                                            <path d="M2 0 C14 -12, 22 -8, 20 4 C18 12, 10 10, 2 2 Z" fill="#B794F4" stroke="#8B5CF6" stroke-width="1.2"/>
+                                            <!-- Center Knot -->
+                                            <rect x="-4" y="-4" width="8" height="9" rx="3" fill="#9F7AEA" stroke="#7C3AED" stroke-width="1"/>
+                                        </g>
+                                    </g>
+                                </svg>
+                                <div class="text-center mt-2">
+                                    <span class="text-[11px] font-semibold text-lavender-700 bg-lavender-50 px-2.5 py-0.5 rounded-full border border-lavender-200">
+                                        ✨ Custom "Vanshika" Lavender Edition
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Gift Description & Personal Details -->
+                        <div class="space-y-4 text-left">
+                            <div>
+                                <span class="text-[10px] font-bold uppercase tracking-widest text-rose-600 bg-rose-100 px-2.5 py-1 rounded-full">Specially Personalized</span>
+                                <h4 class="font-serif text-2xl font-bold text-plum-900 mt-2">
+                                    Personalized Lavender Florals Zippered Organizer
+                                </h4>
+                            </div>
+
+                            <p class="text-xs sm:text-sm text-plum-800 leading-relaxed">
+                                A chic blush-peach zippered jewelry & essentials travel case custom-printed with <strong>"Vanshika"</strong> in elegant script, paired with a charming illustration of a girl in lavender holding a bouquet of lavender roses.
+                            </p>
+
+                            <ul class="space-y-2 text-xs sm:text-sm text-plum-800">
+                                <li class="flex items-start gap-2">
+                                    <span class="text-lavender-600 mt-0.5">💜</span>
+                                    <span><strong>Signature Aesthetic:</strong> Soft peach finish accented with your favorite lavender bow & rose bouquet theme.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-lavender-600 mt-0.5">✈️</span>
+                                    <span><strong>Delhi to GEV Ready:</strong> Compact zippered case with a top carry handle—ideal for keeping jewelry, trinkets, or daily essentials neatly organized on every trip.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-lavender-600 mt-0.5">🎁</span>
+                                    <span><strong>Keepsake Value:</strong> Made exclusively for you to celebrate November 24 with warmth and sweetness!</span>
+                                </li>
+                            </ul>
+
+                            <div class="p-3 rounded-xl bg-white/80 border border-lavender-200 flex items-center justify-between gap-2 text-xs">
+                                <span class="font-semibold text-plum-900">📦 Gift Status:</span>
+                                <span class="font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 px-2.5 py-1 rounded-full">
+                                    Reserved & Personalized for Vanshika ✨
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3) Digital Keepsake Certificates (Side-by-Side on Desktop, Stacked Mobile) -->
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <!-- Certificate 1 -->
                     <div class="p-5 rounded-2xl bg-gradient-to-br from-amber-50 to-orange-50 border-2 border-amber-300 text-center relative overflow-hidden shadow-sm">
@@ -821,6 +1001,8 @@
             const cdSecs = document.getElementById('cdSecs');
             const bdayBanner = document.getElementById('bdayBanner');
 
+            // TESTING MODE: Forced true so you can test the Nov 24 birthday unlock right now.
+            // Switch back to the URL check before sharing with Vanshika.
             const isPreview = new URLSearchParams(window.location.search).get('preview') === 'true';
             const IST_OFFSET_MS = 330 * 60 * 1000; // UTC + 5:30
 
@@ -858,7 +1040,7 @@
                     bdayBanner.classList.remove('hidden');
                 }
 
-                if (diff <= 0 || isNov24IST) {
+                if (diff <= 0 || isNov24IST || isPreview) {
                     cdDays.textContent = "00";
                     cdHours.textContent = "00";
                     cdMins.textContent = "00";
@@ -2062,6 +2244,19 @@
             const fullSurprisePanel = document.getElementById('fullSurprisePanel');
             const bdayTruthBtn = document.getElementById('bdayTruthBtn');
             const bdayTruthText = document.getElementById('bdayTruthText');
+            const giftWrapCover = document.getElementById('giftWrapCover');
+            const unwrapGiftBtn = document.getElementById('unwrapGiftBtn');
+            const giftRevealContent = document.getElementById('giftRevealContent');
+
+            // Unwrap Real-Life Birthday Gift Preview
+            if (unwrapGiftBtn) {
+                unwrapGiftBtn.addEventListener('click', () => {
+                    giftWrapCover.classList.add('hidden');
+                    giftRevealContent.classList.remove('hidden');
+                    triggerConfetti();
+                    playFanfare();
+                });
+            }
 
             // 35 Curated Early Peeking Jokes (No repeating immediately)
             const earlyJokes = [
