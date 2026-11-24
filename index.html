@@ -1306,7 +1306,7 @@
                 const istMonth = istCalendar.getUTCMonth(); // 0-indexed (10 = November)
                 const istDay = istCalendar.getUTCDate();
 
-                const isNov24IST = (istMonth === 10 && istDay === 24);
+                const isNov24IST = (istYear > 2026) || (istYear === 2026 && (istMonth > 10 || (istMonth === 10 && istDay >= 24)));
 
                 // Point to next year if Nov 24 IST has already passed this year
                 let targetYear = istYear;
